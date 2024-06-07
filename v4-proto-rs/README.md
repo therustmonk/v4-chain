@@ -1,8 +1,8 @@
 # Rust crate for dYdX Chain protobufs
 
-## !!! TODO before contribution to the upstream !!!
+## !!! TODO before contribution to the upstream remove this section of README !!!
 
-1. To use for development (Nethermind SSO login enabled, ssh keys are loaded by ssh-agent)
+To use for development (Nethermind SSO login enabled, ssh keys are loaded by ssh-agent)
 
     Cargo.toml
 
@@ -10,9 +10,6 @@
     [dependencies]
     v4-proto-rs = { git = "ssh://git@github.com/NethermindEth/v4-chain.git" }
     ```
-
-2. check the TODO in Cargo.toml
-3. remove this section of README
 
 ## Usage as a dependency
 

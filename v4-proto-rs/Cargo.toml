@@ -19,8 +19,6 @@ prost-types = "0.12"
 num-bigint = { version = "0.4.5", optional = true }
 
 [build-dependencies]
-# TODO: after PR https://github.com/Valensas/tonic-buf-build/pull/4 is merged, replace with
-# tonic-buf-build =  "0.2.1"
-tonic-buf-build =  { git = "https://github.com/maksimryndin/tonic-buf-build.git", rev="c90e4a4dc0325f5415b42efa34f6d54b18f79ae1"}
+tonic-buf-build = "0.2.1"
 prost-build = "0.12" # keep the version the same as in tonic-buf-build
 tonic-build = "0.11" # keep the version the same as in tonic-buf-build
