@@ -32,8 +32,8 @@ pub use v4_proto_rs::dydxprotocol::rewards::query_client::QueryClient as Rewards
 *Note:* by default, rust stub files are not rebuilt (see Q&A below)
 
 For more idiomatic Rust you can use conversions (`try_into` and `into`) for the following types:
-`prost_types::Timestamp` -> `std::time::SystemTime`
-`prost_types::Duration`-> `std::time::Duration`
+* `prost_types::Timestamp` -> `std::time::SystemTime`
+* `prost_types::Duration`-> `std::time::Duration`
 
 Cosmos `Coin` type has a convenient counterpart also (available with feature `wrappers` by default):
 
