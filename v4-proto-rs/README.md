@@ -31,6 +31,29 @@ pub use v4_proto_rs::dydxprotocol::rewards::query_client::QueryClient as Rewards
 
 *Note:* by default, rust stub files are not rebuilt (see Q&A below)
 
+For more idiomatic Rust you can use conversions (`try_into` and `into`) for the following types:
+`prost_types::Timestamp` -> `std::time::SystemTime`
+`prost_types::Duration`-> `std::time::Duration`
+
+Cosmos `Coin` type has a convenient counterpart also (available with feature `wrappers` by default):
+
+```rust
+use std::str::FromStr;
+use v4_proto_rs::coin::{Coin, Denom};
+use v4_proto_rs::cosmos::base::v1beta1::Coin as ProtoCoin;
+use v4_proto_rs::num_bigint::BigUint;
+
+fn main() {
+    let proto_coin = ProtoCoin {
+        denom: "adv4tnt".to_string(),
+        amount: "123".to_string(),
+    };
+    let coin: Coin = proto_coin.try_into().unwrap();
+    assert_eq!(coin.denom, Denom::from_str("adv4tnt").unwrap());
+    assert_eq!(coin.amount, BigUint::from(123u32));
+}
+```
+
 ## Local development
 
 ### Prerequisites
