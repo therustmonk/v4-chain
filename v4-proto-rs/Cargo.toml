@@ -8,17 +8,24 @@ edition = "2021"
 [lib]
 doctest = false
 
-[features]
-default = ["wrappers"]
-wrappers = ["num-bigint"]
-
 [dependencies]
-tonic = "0.11"
+cosmos-sdk-proto = "0.21.1"
+tonic = { version = "0.11", features = ["tls", "tls-roots", "transport", "channel"] }
 prost = "0.12"
 prost-types = "0.12"
-num-bigint = { version = "0.4.5", optional = true }
 
 [build-dependencies]
 tonic-buf-build = "0.2.1"
 prost-build = "0.12" # keep the version the same as in tonic-buf-build
 tonic-build = "0.11" # keep the version the same as in tonic-buf-build
+
+[dev-dependencies]
+anyhow = "1"
+bip32 = { version = "0.5.1", default-features = false, features = ["bip39", "alloc", "secp256k1"] }
+chrono = "0.4"
+cosmrs = "0.16.0"
+rand = "0.8.5"
+rustls = "0.23"
+rustls-native-certs = "0.7.0"
+tokio = { version = "1.0", features = ["macros"] }
+tower = "0.4"
