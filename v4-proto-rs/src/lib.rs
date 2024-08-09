@@ -3,6 +3,7 @@ pub use cosmos_sdk_proto;
 
 include!(concat!(env!("CARGO_MANIFEST_DIR"), "/src/_includes.rs"));
 
+use const_str::replace;
 use prost::Message;
 use prost_types;
 
@@ -11,8 +12,13 @@ macro_rules! impl_prost_any_from {
         impl From<$type> for prost_types::Any {
             fn from(msg: $type) -> Self {
                 let value = msg.encode_to_vec();
-                let type_url = stringify!($type).replace("crate::", "/").replace("::", ".");
-                prost_types::Any { type_url, value }
+                const TYPE: &str = stringify!($type);
+                const TYPE_WITH_ROOT: &str = replace!(TYPE, "crate::", "/");
+                const TYPE_AS_PATH: &str = replace!(TYPE_WITH_ROOT, "::", ".");
+                prost_types::Any {
+                    type_url: TYPE_AS_PATH.to_string(),
+                    value,
+                }
             }
         }
     };
