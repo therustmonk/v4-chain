@@ -40,6 +40,16 @@ pub struct EpochInfo {
     #[prost(bool, tag = "7")]
     pub fast_forward_next_tick: bool,
 }
+impl ::prost::Name for EpochInfo {
+    const NAME: &'static str = "EpochInfo";
+    const PACKAGE: &'static str = "dydxprotocol.epochs";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.epochs.EpochInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.epochs.EpochInfo".into()
+    }
+}
 /// GenesisState defines the epochs module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -48,6 +58,16 @@ pub struct GenesisState {
     #[prost(message, repeated, tag = "1")]
     pub epoch_info_list: ::prost::alloc::vec::Vec<EpochInfo>,
 }
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.epochs";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.epochs.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.epochs.GenesisState".into()
+    }
+}
 /// QueryGetEpochInfoRequest is request type for the GetEpochInfo RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -55,12 +75,32 @@ pub struct QueryGetEpochInfoRequest {
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
+impl ::prost::Name for QueryGetEpochInfoRequest {
+    const NAME: &'static str = "QueryGetEpochInfoRequest";
+    const PACKAGE: &'static str = "dydxprotocol.epochs";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.epochs.QueryGetEpochInfoRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.epochs.QueryGetEpochInfoRequest".into()
+    }
+}
 /// QueryEpochInfoResponse is response type for the GetEpochInfo RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryEpochInfoResponse {
     #[prost(message, optional, tag = "1")]
     pub epoch_info: ::core::option::Option<EpochInfo>,
+}
+impl ::prost::Name for QueryEpochInfoResponse {
+    const NAME: &'static str = "QueryEpochInfoResponse";
+    const PACKAGE: &'static str = "dydxprotocol.epochs";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.epochs.QueryEpochInfoResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.epochs.QueryEpochInfoResponse".into()
+    }
 }
 /// QueryAllEpochInfoRequest is request type for the AllEpochInfo RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -70,6 +110,16 @@ pub struct QueryAllEpochInfoRequest {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
+}
+impl ::prost::Name for QueryAllEpochInfoRequest {
+    const NAME: &'static str = "QueryAllEpochInfoRequest";
+    const PACKAGE: &'static str = "dydxprotocol.epochs";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.epochs.QueryAllEpochInfoRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.epochs.QueryAllEpochInfoRequest".into()
+    }
 }
 /// QueryEpochInfoAllResponse is response type for the AllEpochInfo RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -81,6 +131,16 @@ pub struct QueryEpochInfoAllResponse {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
+}
+impl ::prost::Name for QueryEpochInfoAllResponse {
+    const NAME: &'static str = "QueryEpochInfoAllResponse";
+    const PACKAGE: &'static str = "dydxprotocol.epochs";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.epochs.QueryEpochInfoAllResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.epochs.QueryEpochInfoAllResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {

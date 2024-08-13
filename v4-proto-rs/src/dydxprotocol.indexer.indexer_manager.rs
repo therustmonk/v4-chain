@@ -9,6 +9,16 @@ pub struct IndexerTendermintEventWrapper {
     #[prost(string, tag = "2")]
     pub txn_hash: ::prost::alloc::string::String,
 }
+impl ::prost::Name for IndexerTendermintEventWrapper {
+    const NAME: &'static str = "IndexerTendermintEventWrapper";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.indexer_manager";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.indexer_manager.IndexerTendermintEventWrapper".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.indexer_manager.IndexerTendermintEventWrapper".into()
+    }
+}
 /// IndexerEventsStoreValue represents the type of the value of the
 /// `IndexerEventsStore` in state.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -16,6 +26,16 @@ pub struct IndexerTendermintEventWrapper {
 pub struct IndexerEventsStoreValue {
     #[prost(message, repeated, tag = "1")]
     pub events: ::prost::alloc::vec::Vec<IndexerTendermintEventWrapper>,
+}
+impl ::prost::Name for IndexerEventsStoreValue {
+    const NAME: &'static str = "IndexerEventsStoreValue";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.indexer_manager";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.indexer_manager.IndexerEventsStoreValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.indexer_manager.IndexerEventsStoreValue".into()
+    }
 }
 /// IndexerTendermintEvent contains the base64 encoded event proto emitted from
 /// the dYdX application as well as additional metadata to determine the ordering
@@ -104,6 +124,16 @@ pub mod indexer_tendermint_event {
         BlockEvent(i32),
     }
 }
+impl ::prost::Name for IndexerTendermintEvent {
+    const NAME: &'static str = "IndexerTendermintEvent";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.indexer_manager";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.indexer_manager.IndexerTendermintEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.indexer_manager.IndexerTendermintEvent".into()
+    }
+}
 /// IndexerTendermintBlock contains all the events for the block along with
 /// metadata for the block height, timestamp of the block and a list of all the
 /// hashes of the transactions within the block. The transaction hashes follow
@@ -119,4 +149,14 @@ pub struct IndexerTendermintBlock {
     pub events: ::prost::alloc::vec::Vec<IndexerTendermintEvent>,
     #[prost(string, repeated, tag = "4")]
     pub tx_hashes: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+}
+impl ::prost::Name for IndexerTendermintBlock {
+    const NAME: &'static str = "IndexerTendermintBlock";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.indexer_manager";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.indexer_manager.IndexerTendermintBlock".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.indexer_manager.IndexerTendermintBlock".into()
+    }
 }

@@ -71,3 +71,13 @@ pub mod redis_order {
         }
     }
 }
+impl ::prost::Name for RedisOrder {
+    const NAME: &'static str = "RedisOrder";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.redis";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.redis.RedisOrder".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.redis.RedisOrder".into()
+    }
+}

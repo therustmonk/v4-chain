@@ -3,6 +3,16 @@
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenesisState {}
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.govplus";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.govplus.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.govplus.GenesisState".into()
+    }
+}
 /// Generated client implementations.
 pub mod query_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
@@ -124,10 +134,30 @@ pub struct MsgSlashValidator {
     #[prost(string, tag = "5")]
     pub slash_factor: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MsgSlashValidator {
+    const NAME: &'static str = "MsgSlashValidator";
+    const PACKAGE: &'static str = "dydxprotocol.govplus";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.govplus.MsgSlashValidator".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.govplus.MsgSlashValidator".into()
+    }
+}
 /// MsgSlashValidatorResponse is the Msg/SlashValidator response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgSlashValidatorResponse {}
+impl ::prost::Name for MsgSlashValidatorResponse {
+    const NAME: &'static str = "MsgSlashValidatorResponse";
+    const PACKAGE: &'static str = "dydxprotocol.govplus";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.govplus.MsgSlashValidatorResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.govplus.MsgSlashValidatorResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

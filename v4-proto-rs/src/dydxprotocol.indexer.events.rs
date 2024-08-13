@@ -16,6 +16,16 @@ pub struct FundingUpdateV1 {
     #[prost(bytes = "vec", tag = "3")]
     pub funding_index: ::prost::alloc::vec::Vec<u8>,
 }
+impl ::prost::Name for FundingUpdateV1 {
+    const NAME: &'static str = "FundingUpdateV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.FundingUpdateV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.FundingUpdateV1".into()
+    }
+}
 /// FundingEvent message contains a list of per-market funding values. The
 /// funding values in the list is of the same type and the types are: which can
 /// have one of the following types:
@@ -89,6 +99,16 @@ pub mod funding_event_v1 {
         }
     }
 }
+impl ::prost::Name for FundingEventV1 {
+    const NAME: &'static str = "FundingEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.FundingEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.FundingEventV1".into()
+    }
+}
 /// MarketEvent message contains all the information about a market event on
 /// the dYdX chain.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -115,6 +135,16 @@ pub mod market_event_v1 {
         MarketModify(super::MarketModifyEventV1),
     }
 }
+impl ::prost::Name for MarketEventV1 {
+    const NAME: &'static str = "MarketEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.MarketEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.MarketEventV1".into()
+    }
+}
 /// MarketPriceUpdateEvent message contains all the information about a price
 /// update on the dYdX chain.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -125,6 +155,16 @@ pub struct MarketPriceUpdateEventV1 {
     /// of `1,000,000,000` represents “$10,000`.
     #[prost(uint64, tag = "1")]
     pub price_with_exponent: u64,
+}
+impl ::prost::Name for MarketPriceUpdateEventV1 {
+    const NAME: &'static str = "MarketPriceUpdateEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.MarketPriceUpdateEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.MarketPriceUpdateEventV1".into()
+    }
 }
 /// shared fields between MarketCreateEvent and MarketModifyEvent
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -137,6 +177,16 @@ pub struct MarketBaseEventV1 {
     /// Measured as 1e-6.
     #[prost(uint32, tag = "2")]
     pub min_price_change_ppm: u32,
+}
+impl ::prost::Name for MarketBaseEventV1 {
+    const NAME: &'static str = "MarketBaseEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.MarketBaseEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.MarketBaseEventV1".into()
+    }
 }
 /// MarketCreateEvent message contains all the information about a new market on
 /// the dYdX chain.
@@ -152,6 +202,16 @@ pub struct MarketCreateEventV1 {
     #[prost(sint32, tag = "2")]
     pub exponent: i32,
 }
+impl ::prost::Name for MarketCreateEventV1 {
+    const NAME: &'static str = "MarketCreateEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.MarketCreateEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.MarketCreateEventV1".into()
+    }
+}
 /// MarketModifyEvent message contains all the information about a market update
 /// on the dYdX chain
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -159,6 +219,16 @@ pub struct MarketCreateEventV1 {
 pub struct MarketModifyEventV1 {
     #[prost(message, optional, tag = "1")]
     pub base: ::core::option::Option<MarketBaseEventV1>,
+}
+impl ::prost::Name for MarketModifyEventV1 {
+    const NAME: &'static str = "MarketModifyEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.MarketModifyEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.MarketModifyEventV1".into()
+    }
 }
 /// SourceOfFunds is the source of funds in a transfer event.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -182,6 +252,16 @@ pub mod source_of_funds {
         SubaccountId(super::super::protocol::v1::IndexerSubaccountId),
         #[prost(string, tag = "2")]
         Address(::prost::alloc::string::String),
+    }
+}
+impl ::prost::Name for SourceOfFunds {
+    const NAME: &'static str = "SourceOfFunds";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.SourceOfFunds".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.SourceOfFunds".into()
     }
 }
 /// TransferEvent message contains all the information about a transfer,
@@ -215,6 +295,16 @@ pub struct TransferEventV1 {
     /// - a wallet address (in withdraw events).
     #[prost(message, optional, tag = "6")]
     pub recipient: ::core::option::Option<SourceOfFunds>,
+}
+impl ::prost::Name for TransferEventV1 {
+    const NAME: &'static str = "TransferEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.TransferEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.TransferEventV1".into()
+    }
 }
 /// OrderFillEvent message contains all the information from an order match in
 /// the dYdX chain. This includes the maker/taker orders that matched and the
@@ -256,6 +346,16 @@ pub mod order_fill_event_v1 {
         LiquidationOrder(super::LiquidationOrderV1),
     }
 }
+impl ::prost::Name for OrderFillEventV1 {
+    const NAME: &'static str = "OrderFillEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.OrderFillEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.OrderFillEventV1".into()
+    }
+}
 /// DeleveragingEvent message contains all the information for a deleveraging
 /// on the dYdX chain. This includes the liquidated/offsetting subaccounts and
 /// the amount filled.
@@ -288,6 +388,16 @@ pub struct DeleveragingEventV1 {
     #[prost(bool, tag = "7")]
     pub is_final_settlement: bool,
 }
+impl ::prost::Name for DeleveragingEventV1 {
+    const NAME: &'static str = "DeleveragingEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.DeleveragingEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.DeleveragingEventV1".into()
+    }
+}
 /// LiquidationOrder represents the liquidation taker order to be included in a
 /// liquidation order fill event.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -317,6 +427,16 @@ pub struct LiquidationOrderV1 {
     #[prost(uint64, tag = "6")]
     pub subticks: u64,
 }
+impl ::prost::Name for LiquidationOrderV1 {
+    const NAME: &'static str = "LiquidationOrderV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.LiquidationOrderV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.LiquidationOrderV1".into()
+    }
+}
 /// SubaccountUpdateEvent message contains information about an update to a
 /// subaccount in the dYdX chain. This includes the list of updated perpetual
 /// and asset positions for the subaccount.
@@ -339,6 +459,16 @@ pub struct SubaccountUpdateEventV1 {
         super::protocol::v1::IndexerAssetPosition,
     >,
 }
+impl ::prost::Name for SubaccountUpdateEventV1 {
+    const NAME: &'static str = "SubaccountUpdateEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.SubaccountUpdateEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.SubaccountUpdateEventV1".into()
+    }
+}
 /// StatefulOrderEvent message contains information about a change to a stateful
 /// order. Currently, this is either the placement of a long-term order, the
 /// placement or triggering of a conditional order, or the removal of a
@@ -360,6 +490,18 @@ pub mod stateful_order_event_v1 {
         #[prost(message, optional, tag = "1")]
         pub order: ::core::option::Option<super::super::protocol::v1::IndexerOrder>,
     }
+    impl ::prost::Name for StatefulOrderPlacementV1 {
+        const NAME: &'static str = "StatefulOrderPlacementV1";
+        const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.indexer.events.StatefulOrderEventV1.StatefulOrderPlacementV1"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.indexer.events.StatefulOrderEventV1.StatefulOrderPlacementV1"
+                .into()
+        }
+    }
     /// A stateful order removal contains the id of an order that was already
     /// placed and is now removed and the reason for the removal.
     #[allow(clippy::derive_partial_eq_without_eq)]
@@ -372,6 +514,18 @@ pub mod stateful_order_event_v1 {
         #[prost(enumeration = "super::super::shared::OrderRemovalReason", tag = "2")]
         pub reason: i32,
     }
+    impl ::prost::Name for StatefulOrderRemovalV1 {
+        const NAME: &'static str = "StatefulOrderRemovalV1";
+        const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.indexer.events.StatefulOrderEventV1.StatefulOrderRemovalV1"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.indexer.events.StatefulOrderEventV1.StatefulOrderRemovalV1"
+                .into()
+        }
+    }
     /// A conditional order placement contains an order. The order is newly-placed
     /// and untriggered when this event is emitted.
     #[allow(clippy::derive_partial_eq_without_eq)]
@@ -379,6 +533,18 @@ pub mod stateful_order_event_v1 {
     pub struct ConditionalOrderPlacementV1 {
         #[prost(message, optional, tag = "1")]
         pub order: ::core::option::Option<super::super::protocol::v1::IndexerOrder>,
+    }
+    impl ::prost::Name for ConditionalOrderPlacementV1 {
+        const NAME: &'static str = "ConditionalOrderPlacementV1";
+        const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.indexer.events.StatefulOrderEventV1.ConditionalOrderPlacementV1"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.indexer.events.StatefulOrderEventV1.ConditionalOrderPlacementV1"
+                .into()
+        }
     }
     /// A conditional order trigger event contains an order id and is emitted when
     /// an order is triggered.
@@ -390,6 +556,18 @@ pub mod stateful_order_event_v1 {
             super::super::protocol::v1::IndexerOrderId,
         >,
     }
+    impl ::prost::Name for ConditionalOrderTriggeredV1 {
+        const NAME: &'static str = "ConditionalOrderTriggeredV1";
+        const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.indexer.events.StatefulOrderEventV1.ConditionalOrderTriggeredV1"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.indexer.events.StatefulOrderEventV1.ConditionalOrderTriggeredV1"
+                .into()
+        }
+    }
     /// A long term order placement contains an order.
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Message)]
@@ -397,12 +575,36 @@ pub mod stateful_order_event_v1 {
         #[prost(message, optional, tag = "1")]
         pub order: ::core::option::Option<super::super::protocol::v1::IndexerOrder>,
     }
+    impl ::prost::Name for LongTermOrderPlacementV1 {
+        const NAME: &'static str = "LongTermOrderPlacementV1";
+        const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.indexer.events.StatefulOrderEventV1.LongTermOrderPlacementV1"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.indexer.events.StatefulOrderEventV1.LongTermOrderPlacementV1"
+                .into()
+        }
+    }
     /// A long term order placement contains an order.
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct LongTermOrderReplacementV1 {
         #[prost(message, optional, tag = "1")]
         pub order: ::core::option::Option<super::super::protocol::v1::IndexerOrder>,
+    }
+    impl ::prost::Name for LongTermOrderReplacementV1 {
+        const NAME: &'static str = "LongTermOrderReplacementV1";
+        const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.indexer.events.StatefulOrderEventV1.LongTermOrderReplacementV1"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.indexer.events.StatefulOrderEventV1.LongTermOrderReplacementV1"
+                .into()
+        }
     }
     /// The type of event that this StatefulOrderEvent contains.
     #[allow(clippy::derive_partial_eq_without_eq)]
@@ -421,6 +623,16 @@ pub mod stateful_order_event_v1 {
         LongTermOrderPlacement(LongTermOrderPlacementV1),
         #[prost(message, tag = "8")]
         OrderReplace(LongTermOrderReplacementV1),
+    }
+}
+impl ::prost::Name for StatefulOrderEventV1 {
+    const NAME: &'static str = "StatefulOrderEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.StatefulOrderEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.StatefulOrderEventV1".into()
     }
 }
 /// AssetCreateEventV1 message contains all the information about an new Asset on
@@ -450,6 +662,16 @@ pub struct AssetCreateEventV1 {
     /// a position size of one full coin.
     #[prost(sint32, tag = "5")]
     pub atomic_resolution: i32,
+}
+impl ::prost::Name for AssetCreateEventV1 {
+    const NAME: &'static str = "AssetCreateEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.AssetCreateEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.AssetCreateEventV1".into()
+    }
 }
 /// PerpetualMarketCreateEventV1 message contains all the information about a
 /// new Perpetual Market on the dYdX chain.
@@ -504,6 +726,16 @@ pub struct PerpetualMarketCreateEventV1 {
     /// Defined in perpetuals.perpetual
     #[prost(uint32, tag = "10")]
     pub liquidity_tier: u32,
+}
+impl ::prost::Name for PerpetualMarketCreateEventV1 {
+    const NAME: &'static str = "PerpetualMarketCreateEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.PerpetualMarketCreateEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.PerpetualMarketCreateEventV1".into()
+    }
 }
 /// PerpetualMarketCreateEventV2 message contains all the information about a
 /// new Perpetual Market on the dYdX chain.
@@ -560,6 +792,16 @@ pub struct PerpetualMarketCreateEventV2 {
     #[prost(enumeration = "super::protocol::v1::PerpetualMarketType", tag = "11")]
     pub market_type: i32,
 }
+impl ::prost::Name for PerpetualMarketCreateEventV2 {
+    const NAME: &'static str = "PerpetualMarketCreateEventV2";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.PerpetualMarketCreateEventV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.PerpetualMarketCreateEventV2".into()
+    }
+}
 /// LiquidityTierUpsertEventV1 message contains all the information to
 /// create/update a Liquidity Tier on the dYdX chain.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -587,6 +829,16 @@ pub struct LiquidityTierUpsertEventV1 {
     #[deprecated]
     #[prost(uint64, tag = "5")]
     pub base_position_notional: u64,
+}
+impl ::prost::Name for LiquidityTierUpsertEventV1 {
+    const NAME: &'static str = "LiquidityTierUpsertEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.LiquidityTierUpsertEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.LiquidityTierUpsertEventV1".into()
+    }
 }
 /// UpdateClobPairEventV1 message contains all the information about an update to
 /// a clob pair on the dYdX chain.
@@ -617,6 +869,16 @@ pub struct UpdateClobPairEventV1 {
     #[prost(uint64, tag = "5")]
     pub step_base_quantums: u64,
 }
+impl ::prost::Name for UpdateClobPairEventV1 {
+    const NAME: &'static str = "UpdateClobPairEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.UpdateClobPairEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.UpdateClobPairEventV1".into()
+    }
+}
 /// UpdatePerpetualEventV1 message contains all the information about an update
 /// to a perpetual on the dYdX chain.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -646,6 +908,16 @@ pub struct UpdatePerpetualEventV1 {
     #[prost(uint32, tag = "5")]
     pub liquidity_tier: u32,
 }
+impl ::prost::Name for UpdatePerpetualEventV1 {
+    const NAME: &'static str = "UpdatePerpetualEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.UpdatePerpetualEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.UpdatePerpetualEventV1".into()
+    }
+}
 /// TradingRewardsEventV1 is communicates all trading rewards for all accounts
 /// that receive trade rewards in the block.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -654,6 +926,16 @@ pub struct TradingRewardsEventV1 {
     /// The list of all trading rewards in the block.
     #[prost(message, repeated, tag = "1")]
     pub trading_rewards: ::prost::alloc::vec::Vec<AddressTradingReward>,
+}
+impl ::prost::Name for TradingRewardsEventV1 {
+    const NAME: &'static str = "TradingRewardsEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.TradingRewardsEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.TradingRewardsEventV1".into()
+    }
 }
 /// AddressTradingReward contains info on an instance of an address receiving a
 /// reward
@@ -668,6 +950,16 @@ pub struct AddressTradingReward {
     #[prost(bytes = "vec", tag = "2")]
     pub denom_amount: ::prost::alloc::vec::Vec<u8>,
 }
+impl ::prost::Name for AddressTradingReward {
+    const NAME: &'static str = "AddressTradingReward";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.AddressTradingReward".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.AddressTradingReward".into()
+    }
+}
 /// OpenInterestUpdateEventV1 is used for open interest update events
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -675,6 +967,16 @@ pub struct OpenInterestUpdateEventV1 {
     /// The list of all open interest updates in the block.
     #[prost(message, repeated, tag = "1")]
     pub open_interest_updates: ::prost::alloc::vec::Vec<OpenInterestUpdate>,
+}
+impl ::prost::Name for OpenInterestUpdateEventV1 {
+    const NAME: &'static str = "OpenInterestUpdateEventV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.OpenInterestUpdateEventV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.OpenInterestUpdateEventV1".into()
+    }
 }
 /// OpenInterestUpdate contains a single open interest update for a perpetual
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -686,6 +988,16 @@ pub struct OpenInterestUpdate {
     /// The new open interest value for the perpetual market.
     #[prost(bytes = "vec", tag = "2")]
     pub open_interest: ::prost::alloc::vec::Vec<u8>,
+}
+impl ::prost::Name for OpenInterestUpdate {
+    const NAME: &'static str = "OpenInterestUpdate";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.OpenInterestUpdate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.OpenInterestUpdate".into()
+    }
 }
 /// LiquidationEventV2 message contains all the information needed to update
 /// the liquidity tiers. It contains all the fields from V1 along with the
@@ -721,4 +1033,14 @@ pub struct LiquidityTierUpsertEventV2 {
     /// Upper cap of open interest in quote quantums.
     #[prost(uint64, tag = "7")]
     pub open_interest_upper_cap: u64,
+}
+impl ::prost::Name for LiquidityTierUpsertEventV2 {
+    const NAME: &'static str = "LiquidityTierUpsertEventV2";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.events";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.events.LiquidityTierUpsertEventV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.events.LiquidityTierUpsertEventV2".into()
+    }
 }

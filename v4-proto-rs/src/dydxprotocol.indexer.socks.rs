@@ -13,6 +13,16 @@ pub struct OrderbookMessage {
     #[prost(string, tag = "3")]
     pub version: ::prost::alloc::string::String,
 }
+impl ::prost::Name for OrderbookMessage {
+    const NAME: &'static str = "OrderbookMessage";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.socks";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.socks.OrderbookMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.socks.OrderbookMessage".into()
+    }
+}
 /// Message to be sent through the 'to-websockets-subaccounts` kafka topic.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -36,6 +46,16 @@ pub struct SubaccountMessage {
     #[prost(string, tag = "6")]
     pub version: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SubaccountMessage {
+    const NAME: &'static str = "SubaccountMessage";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.socks";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.socks.SubaccountMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.socks.SubaccountMessage".into()
+    }
+}
 /// Message to be sent through the 'to-websockets-trades` kafka topic.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -53,6 +73,16 @@ pub struct TradeMessage {
     #[prost(string, tag = "6")]
     pub version: ::prost::alloc::string::String,
 }
+impl ::prost::Name for TradeMessage {
+    const NAME: &'static str = "TradeMessage";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.socks";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.socks.TradeMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.socks.TradeMessage".into()
+    }
+}
 /// Message to be sent through the 'to-websockets-markets` kafka topic.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -63,6 +93,16 @@ pub struct MarketMessage {
     /// Version of the websocket message.
     #[prost(string, tag = "2")]
     pub version: ::prost::alloc::string::String,
+}
+impl ::prost::Name for MarketMessage {
+    const NAME: &'static str = "MarketMessage";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.socks";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.socks.MarketMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.socks.MarketMessage".into()
+    }
 }
 /// Message to be sent through the 'to-websockets-candles` kafka topic.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -142,5 +182,15 @@ pub mod candle_message {
                 _ => None,
             }
         }
+    }
+}
+impl ::prost::Name for CandleMessage {
+    const NAME: &'static str = "CandleMessage";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.socks";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.socks.CandleMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.socks.CandleMessage".into()
     }
 }

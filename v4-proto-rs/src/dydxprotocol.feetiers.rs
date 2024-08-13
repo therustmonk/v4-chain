@@ -7,6 +7,16 @@ pub struct PerpetualFeeParams {
     #[prost(message, repeated, tag = "1")]
     pub tiers: ::prost::alloc::vec::Vec<PerpetualFeeTier>,
 }
+impl ::prost::Name for PerpetualFeeParams {
+    const NAME: &'static str = "PerpetualFeeParams";
+    const PACKAGE: &'static str = "dydxprotocol.feetiers";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.feetiers.PerpetualFeeParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.feetiers.PerpetualFeeParams".into()
+    }
+}
 /// A fee tier for perpetuals
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -30,6 +40,16 @@ pub struct PerpetualFeeTier {
     #[prost(sint32, tag = "6")]
     pub taker_fee_ppm: i32,
 }
+impl ::prost::Name for PerpetualFeeTier {
+    const NAME: &'static str = "PerpetualFeeTier";
+    const PACKAGE: &'static str = "dydxprotocol.feetiers";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.feetiers.PerpetualFeeTier".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.feetiers.PerpetualFeeTier".into()
+    }
+}
 /// GenesisState defines the feetiers module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -38,11 +58,31 @@ pub struct GenesisState {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<PerpetualFeeParams>,
 }
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.feetiers";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.feetiers.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.feetiers.GenesisState".into()
+    }
+}
 /// QueryPerpetualFeeParamsRequest is a request type for the PerpetualFeeParams
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryPerpetualFeeParamsRequest {}
+impl ::prost::Name for QueryPerpetualFeeParamsRequest {
+    const NAME: &'static str = "QueryPerpetualFeeParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.feetiers";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.feetiers.QueryPerpetualFeeParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.feetiers.QueryPerpetualFeeParamsRequest".into()
+    }
+}
 /// QueryPerpetualFeeParamsResponse is a response type for the PerpetualFeeParams
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -51,12 +91,32 @@ pub struct QueryPerpetualFeeParamsResponse {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<PerpetualFeeParams>,
 }
+impl ::prost::Name for QueryPerpetualFeeParamsResponse {
+    const NAME: &'static str = "QueryPerpetualFeeParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.feetiers";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.feetiers.QueryPerpetualFeeParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.feetiers.QueryPerpetualFeeParamsResponse".into()
+    }
+}
 /// QueryUserFeeTierRequest is a request type for the UserFeeTier RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryUserFeeTierRequest {
     #[prost(string, tag = "1")]
     pub user: ::prost::alloc::string::String,
+}
+impl ::prost::Name for QueryUserFeeTierRequest {
+    const NAME: &'static str = "QueryUserFeeTierRequest";
+    const PACKAGE: &'static str = "dydxprotocol.feetiers";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.feetiers.QueryUserFeeTierRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.feetiers.QueryUserFeeTierRequest".into()
+    }
 }
 /// QueryUserFeeTierResponse is a request type for the UserFeeTier RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -67,6 +127,16 @@ pub struct QueryUserFeeTierResponse {
     pub index: u32,
     #[prost(message, optional, tag = "2")]
     pub tier: ::core::option::Option<PerpetualFeeTier>,
+}
+impl ::prost::Name for QueryUserFeeTierResponse {
+    const NAME: &'static str = "QueryUserFeeTierResponse";
+    const PACKAGE: &'static str = "dydxprotocol.feetiers";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.feetiers.QueryUserFeeTierResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.feetiers.QueryUserFeeTierResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -220,11 +290,31 @@ pub struct MsgUpdatePerpetualFeeParams {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<PerpetualFeeParams>,
 }
+impl ::prost::Name for MsgUpdatePerpetualFeeParams {
+    const NAME: &'static str = "MsgUpdatePerpetualFeeParams";
+    const PACKAGE: &'static str = "dydxprotocol.feetiers";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.feetiers.MsgUpdatePerpetualFeeParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.feetiers.MsgUpdatePerpetualFeeParams".into()
+    }
+}
 /// MsgUpdatePerpetualFeeParamsResponse is the Msg/UpdatePerpetualFeeParams
 /// response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdatePerpetualFeeParamsResponse {}
+impl ::prost::Name for MsgUpdatePerpetualFeeParamsResponse {
+    const NAME: &'static str = "MsgUpdatePerpetualFeeParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.feetiers";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.feetiers.MsgUpdatePerpetualFeeParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.feetiers.MsgUpdatePerpetualFeeParamsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

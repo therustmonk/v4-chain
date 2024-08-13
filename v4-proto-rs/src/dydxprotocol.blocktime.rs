@@ -8,6 +8,16 @@ pub struct BlockInfo {
     #[prost(message, optional, tag = "2")]
     pub timestamp: ::core::option::Option<::prost_types::Timestamp>,
 }
+impl ::prost::Name for BlockInfo {
+    const NAME: &'static str = "BlockInfo";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.BlockInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.BlockInfo".into()
+    }
+}
 /// AllDowntimeInfo stores information for all downtime durations.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -29,6 +39,26 @@ pub mod all_downtime_info {
         #[prost(message, optional, tag = "2")]
         pub block_info: ::core::option::Option<super::BlockInfo>,
     }
+    impl ::prost::Name for DowntimeInfo {
+        const NAME: &'static str = "DowntimeInfo";
+        const PACKAGE: &'static str = "dydxprotocol.blocktime";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.blocktime.AllDowntimeInfo.DowntimeInfo".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.blocktime.AllDowntimeInfo.DowntimeInfo".into()
+        }
+    }
+}
+impl ::prost::Name for AllDowntimeInfo {
+    const NAME: &'static str = "AllDowntimeInfo";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.AllDowntimeInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.AllDowntimeInfo".into()
+    }
 }
 /// DowntimeParams defines the parameters for downtime.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -39,6 +69,16 @@ pub struct DowntimeParams {
     #[prost(message, repeated, tag = "1")]
     pub durations: ::prost::alloc::vec::Vec<::prost_types::Duration>,
 }
+impl ::prost::Name for DowntimeParams {
+    const NAME: &'static str = "DowntimeParams";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.DowntimeParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.DowntimeParams".into()
+    }
+}
 /// GenesisState defines the blocktime module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -46,11 +86,31 @@ pub struct GenesisState {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<DowntimeParams>,
 }
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.GenesisState".into()
+    }
+}
 /// QueryDowntimeParamsRequest is a request type for the DowntimeParams
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryDowntimeParamsRequest {}
+impl ::prost::Name for QueryDowntimeParamsRequest {
+    const NAME: &'static str = "QueryDowntimeParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.QueryDowntimeParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.QueryDowntimeParamsRequest".into()
+    }
+}
 /// QueryDowntimeParamsResponse is a response type for the DowntimeParams
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -59,11 +119,31 @@ pub struct QueryDowntimeParamsResponse {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<DowntimeParams>,
 }
+impl ::prost::Name for QueryDowntimeParamsResponse {
+    const NAME: &'static str = "QueryDowntimeParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.QueryDowntimeParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.QueryDowntimeParamsResponse".into()
+    }
+}
 /// QueryPreviousBlockInfoRequest is a request type for the PreviousBlockInfo
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryPreviousBlockInfoRequest {}
+impl ::prost::Name for QueryPreviousBlockInfoRequest {
+    const NAME: &'static str = "QueryPreviousBlockInfoRequest";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.QueryPreviousBlockInfoRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.QueryPreviousBlockInfoRequest".into()
+    }
+}
 /// QueryPreviousBlockInfoResponse is a request type for the PreviousBlockInfo
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -72,11 +152,31 @@ pub struct QueryPreviousBlockInfoResponse {
     #[prost(message, optional, tag = "1")]
     pub info: ::core::option::Option<BlockInfo>,
 }
+impl ::prost::Name for QueryPreviousBlockInfoResponse {
+    const NAME: &'static str = "QueryPreviousBlockInfoResponse";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.QueryPreviousBlockInfoResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.QueryPreviousBlockInfoResponse".into()
+    }
+}
 /// QueryAllDowntimeInfoRequest is a request type for the AllDowntimeInfo
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryAllDowntimeInfoRequest {}
+impl ::prost::Name for QueryAllDowntimeInfoRequest {
+    const NAME: &'static str = "QueryAllDowntimeInfoRequest";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.QueryAllDowntimeInfoRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.QueryAllDowntimeInfoRequest".into()
+    }
+}
 /// QueryAllDowntimeInfoResponse is a request type for the AllDowntimeInfo
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -84,6 +184,16 @@ pub struct QueryAllDowntimeInfoRequest {}
 pub struct QueryAllDowntimeInfoResponse {
     #[prost(message, optional, tag = "1")]
     pub info: ::core::option::Option<AllDowntimeInfo>,
+}
+impl ::prost::Name for QueryAllDowntimeInfoResponse {
+    const NAME: &'static str = "QueryAllDowntimeInfoResponse";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.QueryAllDowntimeInfoResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.QueryAllDowntimeInfoResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -267,11 +377,31 @@ pub struct MsgUpdateDowntimeParams {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<DowntimeParams>,
 }
+impl ::prost::Name for MsgUpdateDowntimeParams {
+    const NAME: &'static str = "MsgUpdateDowntimeParams";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.MsgUpdateDowntimeParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.MsgUpdateDowntimeParams".into()
+    }
+}
 /// MsgUpdateDowntimeParamsResponse is the Msg/UpdateDowntimeParams response
 /// type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateDowntimeParamsResponse {}
+impl ::prost::Name for MsgUpdateDowntimeParamsResponse {
+    const NAME: &'static str = "MsgUpdateDowntimeParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.blocktime";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.blocktime.MsgUpdateDowntimeParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.blocktime.MsgUpdateDowntimeParamsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

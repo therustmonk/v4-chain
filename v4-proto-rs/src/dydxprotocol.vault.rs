@@ -31,6 +31,16 @@ pub struct Params {
     #[prost(bytes = "vec", tag = "7")]
     pub activation_threshold_quote_quantums: ::prost::alloc::vec::Vec<u8>,
 }
+impl ::prost::Name for Params {
+    const NAME: &'static str = "Params";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.Params".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.Params".into()
+    }
+}
 /// GenesisState defines `x/vault`'s genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -38,6 +48,16 @@ pub struct GenesisState {
     /// The parameters of the module.
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<Params>,
+}
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.GenesisState".into()
+    }
 }
 /// VaultId uniquely identifies a vault by its type and number.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -50,6 +70,16 @@ pub struct VaultId {
     #[prost(uint32, tag = "2")]
     pub number: u32,
 }
+impl ::prost::Name for VaultId {
+    const NAME: &'static str = "VaultId";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.VaultId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.VaultId".into()
+    }
+}
 /// NumShares represents the number of shares in a vault.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -57,6 +87,16 @@ pub struct NumShares {
     /// Number of shares.
     #[prost(bytes = "vec", tag = "2")]
     pub num_shares: ::prost::alloc::vec::Vec<u8>,
+}
+impl ::prost::Name for NumShares {
+    const NAME: &'static str = "NumShares";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.NumShares".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.NumShares".into()
+    }
 }
 /// VaultType represents different types of vaults.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -91,12 +131,32 @@ impl VaultType {
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryParamsRequest {}
+impl ::prost::Name for QueryParamsRequest {
+    const NAME: &'static str = "QueryParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.QueryParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.QueryParamsRequest".into()
+    }
+}
 /// QueryParamsResponse is a response type for the Params RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryParamsResponse {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<Params>,
+}
+impl ::prost::Name for QueryParamsResponse {
+    const NAME: &'static str = "QueryParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.QueryParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.QueryParamsResponse".into()
+    }
 }
 /// QueryVaultRequest is a request type for the Vault RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -106,6 +166,16 @@ pub struct QueryVaultRequest {
     pub r#type: i32,
     #[prost(uint32, tag = "2")]
     pub number: u32,
+}
+impl ::prost::Name for QueryVaultRequest {
+    const NAME: &'static str = "QueryVaultRequest";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.QueryVaultRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.QueryVaultRequest".into()
+    }
 }
 /// QueryVaultResponse is a response type for the Vault RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -122,6 +192,16 @@ pub struct QueryVaultResponse {
     #[prost(uint64, tag = "5")]
     pub total_shares: u64,
 }
+impl ::prost::Name for QueryVaultResponse {
+    const NAME: &'static str = "QueryVaultResponse";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.QueryVaultResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.QueryVaultResponse".into()
+    }
+}
 /// QueryAllVaultsRequest is a request type for the AllVaults RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -130,6 +210,16 @@ pub struct QueryAllVaultsRequest {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
+}
+impl ::prost::Name for QueryAllVaultsRequest {
+    const NAME: &'static str = "QueryAllVaultsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.QueryAllVaultsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.QueryAllVaultsRequest".into()
+    }
 }
 /// QueryAllVaultsResponse is a response type for the AllVaults RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -141,6 +231,16 @@ pub struct QueryAllVaultsResponse {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
+}
+impl ::prost::Name for QueryAllVaultsResponse {
+    const NAME: &'static str = "QueryAllVaultsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.QueryAllVaultsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.QueryAllVaultsResponse".into()
+    }
 }
 /// QueryOwnerSharesRequest is a request type for the OwnerShares RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -155,6 +255,16 @@ pub struct QueryOwnerSharesRequest {
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
 }
+impl ::prost::Name for QueryOwnerSharesRequest {
+    const NAME: &'static str = "QueryOwnerSharesRequest";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.QueryOwnerSharesRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.QueryOwnerSharesRequest".into()
+    }
+}
 /// OwnerShare is a type for owner shares in a vault.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -163,6 +273,16 @@ pub struct OwnerShare {
     pub owner: ::prost::alloc::string::String,
     #[prost(message, optional, tag = "2")]
     pub shares: ::core::option::Option<NumShares>,
+}
+impl ::prost::Name for OwnerShare {
+    const NAME: &'static str = "OwnerShare";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.OwnerShare".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.OwnerShare".into()
+    }
 }
 /// QueryOwnerSharesResponse is a response type for the OwnerShares RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -174,6 +294,16 @@ pub struct QueryOwnerSharesResponse {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
+}
+impl ::prost::Name for QueryOwnerSharesResponse {
+    const NAME: &'static str = "QueryOwnerSharesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.QueryOwnerSharesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.QueryOwnerSharesResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -381,10 +511,30 @@ pub struct MsgDepositToVault {
     #[prost(bytes = "vec", tag = "3")]
     pub quote_quantums: ::prost::alloc::vec::Vec<u8>,
 }
+impl ::prost::Name for MsgDepositToVault {
+    const NAME: &'static str = "MsgDepositToVault";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.MsgDepositToVault".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.MsgDepositToVault".into()
+    }
+}
 /// MsgDepositToVaultResponse is the Msg/DepositToVault response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgDepositToVaultResponse {}
+impl ::prost::Name for MsgDepositToVaultResponse {
+    const NAME: &'static str = "MsgDepositToVaultResponse";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.MsgDepositToVaultResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.MsgDepositToVaultResponse".into()
+    }
+}
 /// MsgUpdateParams is the Msg/UpdateParams request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -395,10 +545,30 @@ pub struct MsgUpdateParams {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<Params>,
 }
+impl ::prost::Name for MsgUpdateParams {
+    const NAME: &'static str = "MsgUpdateParams";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.MsgUpdateParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.MsgUpdateParams".into()
+    }
+}
 /// MsgUpdateParamsResponse is the Msg/UpdateParams response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateParamsResponse {}
+impl ::prost::Name for MsgUpdateParamsResponse {
+    const NAME: &'static str = "MsgUpdateParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.vault";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vault.MsgUpdateParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vault.MsgUpdateParamsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

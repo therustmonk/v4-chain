@@ -5,6 +5,16 @@
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenesisState {}
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.GenesisState".into()
+    }
+}
 /// Generated client implementations.
 pub mod query_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
@@ -110,6 +120,16 @@ pub struct Transfer {
     #[prost(uint64, tag = "4")]
     pub amount: u64,
 }
+impl ::prost::Name for Transfer {
+    const NAME: &'static str = "Transfer";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.Transfer".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.Transfer".into()
+    }
+}
 /// MsgDepositToSubaccount represents a single transfer from an `x/bank`
 /// account to an `x/subaccounts` subaccount.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -128,6 +148,16 @@ pub struct MsgDepositToSubaccount {
     #[prost(uint64, tag = "4")]
     pub quantums: u64,
 }
+impl ::prost::Name for MsgDepositToSubaccount {
+    const NAME: &'static str = "MsgDepositToSubaccount";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.MsgDepositToSubaccount".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.MsgDepositToSubaccount".into()
+    }
+}
 /// MsgWithdrawFromSubaccount represents a single transfer from an
 /// `x/subaccounts` subaccount to an `x/bank` account.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -145,6 +175,16 @@ pub struct MsgWithdrawFromSubaccount {
     /// The number of quantums of asset to transfer.
     #[prost(uint64, tag = "4")]
     pub quantums: u64,
+}
+impl ::prost::Name for MsgWithdrawFromSubaccount {
+    const NAME: &'static str = "MsgWithdrawFromSubaccount";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.MsgWithdrawFromSubaccount".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.MsgWithdrawFromSubaccount".into()
+    }
 }
 /// MsgSendFromModuleToAccount represents a single transfer from a module
 /// to an `x/bank` account (can be either a module account address or a user
@@ -166,6 +206,16 @@ pub struct MsgSendFromModuleToAccount {
     #[prost(message, optional, tag = "4")]
     pub coin: ::core::option::Option<super::super::cosmos::base::v1beta1::Coin>,
 }
+impl ::prost::Name for MsgSendFromModuleToAccount {
+    const NAME: &'static str = "MsgSendFromModuleToAccount";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.MsgSendFromModuleToAccount".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.MsgSendFromModuleToAccount".into()
+    }
+}
 /// MsgCreateTransfer is a request type used for initiating new transfers.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -173,25 +223,75 @@ pub struct MsgCreateTransfer {
     #[prost(message, optional, tag = "1")]
     pub transfer: ::core::option::Option<Transfer>,
 }
+impl ::prost::Name for MsgCreateTransfer {
+    const NAME: &'static str = "MsgCreateTransfer";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.MsgCreateTransfer".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.MsgCreateTransfer".into()
+    }
+}
 /// MsgCreateTransferResponse is a response type used for new transfers.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgCreateTransferResponse {}
+impl ::prost::Name for MsgCreateTransferResponse {
+    const NAME: &'static str = "MsgCreateTransferResponse";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.MsgCreateTransferResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.MsgCreateTransferResponse".into()
+    }
+}
 /// MsgDepositToSubaccountResponse is a response type used for new
 /// account-to-subaccount transfers.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgDepositToSubaccountResponse {}
+impl ::prost::Name for MsgDepositToSubaccountResponse {
+    const NAME: &'static str = "MsgDepositToSubaccountResponse";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.MsgDepositToSubaccountResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.MsgDepositToSubaccountResponse".into()
+    }
+}
 /// MsgWithdrawFromSubaccountResponse is a response type used for new
 /// subaccount-to-account transfers.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgWithdrawFromSubaccountResponse {}
+impl ::prost::Name for MsgWithdrawFromSubaccountResponse {
+    const NAME: &'static str = "MsgWithdrawFromSubaccountResponse";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.MsgWithdrawFromSubaccountResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.MsgWithdrawFromSubaccountResponse".into()
+    }
+}
 /// MsgSendFromModuleToAccountResponse is a response type used for new
 /// module-to-account transfers.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgSendFromModuleToAccountResponse {}
+impl ::prost::Name for MsgSendFromModuleToAccountResponse {
+    const NAME: &'static str = "MsgSendFromModuleToAccountResponse";
+    const PACKAGE: &'static str = "dydxprotocol.sending";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.sending.MsgSendFromModuleToAccountResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.sending.MsgSendFromModuleToAccountResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

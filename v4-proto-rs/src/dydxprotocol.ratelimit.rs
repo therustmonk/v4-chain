@@ -12,6 +12,16 @@ pub struct LimitParams {
     #[prost(message, repeated, tag = "2")]
     pub limiters: ::prost::alloc::vec::Vec<Limiter>,
 }
+impl ::prost::Name for LimitParams {
+    const NAME: &'static str = "LimitParams";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.LimitParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.LimitParams".into()
+    }
+}
 /// Limiter defines one rate-limiter on a specfic denom.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -31,6 +41,16 @@ pub struct Limiter {
     #[prost(uint32, tag = "4")]
     pub baseline_tvl_ppm: u32,
 }
+impl ::prost::Name for Limiter {
+    const NAME: &'static str = "Limiter";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.Limiter".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.Limiter".into()
+    }
+}
 /// DenomCapacity stores a list of rate limit capacity for a denom.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -45,6 +65,16 @@ pub struct DenomCapacity {
     #[prost(bytes = "vec", repeated, tag = "2")]
     pub capacity_list: ::prost::alloc::vec::Vec<::prost::alloc::vec::Vec<u8>>,
 }
+impl ::prost::Name for DenomCapacity {
+    const NAME: &'static str = "DenomCapacity";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.DenomCapacity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.DenomCapacity".into()
+    }
+}
 /// LimiterCapacity contains a pair of limiter and its corresponding capacity.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -54,6 +84,16 @@ pub struct LimiterCapacity {
     #[prost(bytes = "vec", tag = "2")]
     pub capacity: ::prost::alloc::vec::Vec<u8>,
 }
+impl ::prost::Name for LimiterCapacity {
+    const NAME: &'static str = "LimiterCapacity";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.LimiterCapacity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.LimiterCapacity".into()
+    }
+}
 /// GenesisState defines the ratelimit module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -61,6 +101,16 @@ pub struct GenesisState {
     /// limit_params_list defines the list of `LimitParams` at genesis.
     #[prost(message, repeated, tag = "1")]
     pub limit_params_list: ::prost::alloc::vec::Vec<LimitParams>,
+}
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.GenesisState".into()
+    }
 }
 /// PendingSendPacket contains the channel_id and sequence pair to identify a
 /// pending packet
@@ -72,16 +122,46 @@ pub struct PendingSendPacket {
     #[prost(uint64, tag = "2")]
     pub sequence: u64,
 }
+impl ::prost::Name for PendingSendPacket {
+    const NAME: &'static str = "PendingSendPacket";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.PendingSendPacket".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.PendingSendPacket".into()
+    }
+}
 /// ListLimitParamsRequest is a request type of the ListLimitParams RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListLimitParamsRequest {}
+impl ::prost::Name for ListLimitParamsRequest {
+    const NAME: &'static str = "ListLimitParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.ListLimitParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.ListLimitParamsRequest".into()
+    }
+}
 /// ListLimitParamsResponse is a response type of the ListLimitParams RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListLimitParamsResponse {
     #[prost(message, repeated, tag = "1")]
     pub limit_params_list: ::prost::alloc::vec::Vec<LimitParams>,
+}
+impl ::prost::Name for ListLimitParamsResponse {
+    const NAME: &'static str = "ListLimitParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.ListLimitParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.ListLimitParamsResponse".into()
+    }
 }
 /// QueryCapacityByDenomRequest is a request type for the CapacityByDenom RPC
 /// method.
@@ -91,6 +171,16 @@ pub struct QueryCapacityByDenomRequest {
     #[prost(string, tag = "1")]
     pub denom: ::prost::alloc::string::String,
 }
+impl ::prost::Name for QueryCapacityByDenomRequest {
+    const NAME: &'static str = "QueryCapacityByDenomRequest";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.QueryCapacityByDenomRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.QueryCapacityByDenomRequest".into()
+    }
+}
 /// QueryCapacityByDenomResponse is a response type of the CapacityByDenom RPC
 /// method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -99,11 +189,31 @@ pub struct QueryCapacityByDenomResponse {
     #[prost(message, repeated, tag = "1")]
     pub limiter_capacity_list: ::prost::alloc::vec::Vec<LimiterCapacity>,
 }
+impl ::prost::Name for QueryCapacityByDenomResponse {
+    const NAME: &'static str = "QueryCapacityByDenomResponse";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.QueryCapacityByDenomResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.QueryCapacityByDenomResponse".into()
+    }
+}
 /// QueryAllPendingSendPacketsRequest is a request type for the
 /// AllPendingSendPackets RPC
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryAllPendingSendPacketsRequest {}
+impl ::prost::Name for QueryAllPendingSendPacketsRequest {
+    const NAME: &'static str = "QueryAllPendingSendPacketsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.QueryAllPendingSendPacketsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.QueryAllPendingSendPacketsRequest".into()
+    }
+}
 /// QueryAllPendingSendPacketsResponse is a response type of the
 /// AllPendingSendPackets RPC
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -111,6 +221,16 @@ pub struct QueryAllPendingSendPacketsRequest {}
 pub struct QueryAllPendingSendPacketsResponse {
     #[prost(message, repeated, tag = "1")]
     pub pending_send_packets: ::prost::alloc::vec::Vec<PendingSendPacket>,
+}
+impl ::prost::Name for QueryAllPendingSendPacketsResponse {
+    const NAME: &'static str = "QueryAllPendingSendPacketsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.QueryAllPendingSendPacketsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.QueryAllPendingSendPacketsResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -297,10 +417,30 @@ pub struct MsgSetLimitParams {
     #[prost(message, optional, tag = "2")]
     pub limit_params: ::core::option::Option<LimitParams>,
 }
+impl ::prost::Name for MsgSetLimitParams {
+    const NAME: &'static str = "MsgSetLimitParams";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.MsgSetLimitParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.MsgSetLimitParams".into()
+    }
+}
 /// MsgSetLimitParamsResponse is the Msg/SetLimitParams response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgSetLimitParamsResponse {}
+impl ::prost::Name for MsgSetLimitParamsResponse {
+    const NAME: &'static str = "MsgSetLimitParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.ratelimit";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.ratelimit.MsgSetLimitParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.ratelimit.MsgSetLimitParamsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

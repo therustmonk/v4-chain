@@ -11,6 +11,16 @@ pub struct IndexerSubaccountId {
     #[prost(uint32, tag = "2")]
     pub number: u32,
 }
+impl ::prost::Name for IndexerSubaccountId {
+    const NAME: &'static str = "IndexerSubaccountId";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.protocol.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.protocol.v1.IndexerSubaccountId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.protocol.v1.IndexerSubaccountId".into()
+    }
+}
 /// IndexerPerpetualPosition are an account’s positions of a `Perpetual`.
 /// Therefore they hold any information needed to trade perpetuals.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -33,6 +43,16 @@ pub struct IndexerPerpetualPosition {
     #[prost(bytes = "vec", tag = "4")]
     pub funding_payment: ::prost::alloc::vec::Vec<u8>,
 }
+impl ::prost::Name for IndexerPerpetualPosition {
+    const NAME: &'static str = "IndexerPerpetualPosition";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.protocol.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.protocol.v1.IndexerPerpetualPosition".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.protocol.v1.IndexerPerpetualPosition".into()
+    }
+}
 /// IndexerAssetPosition define an account’s positions of an `Asset`.
 /// Therefore they hold any information needed to trade on Spot and Margin.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -49,6 +69,16 @@ pub struct IndexerAssetPosition {
     /// TODO(DEC-582): pending margin trading being added.
     #[prost(uint64, tag = "3")]
     pub index: u64,
+}
+impl ::prost::Name for IndexerAssetPosition {
+    const NAME: &'static str = "IndexerAssetPosition";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.protocol.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.protocol.v1.IndexerAssetPosition".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.protocol.v1.IndexerAssetPosition".into()
+    }
 }
 /// IndexerOrderId refers to a single order belonging to a Subaccount.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -84,6 +114,16 @@ pub struct IndexerOrderId {
     /// ID of the CLOB the order is created for.
     #[prost(uint32, tag = "4")]
     pub clob_pair_id: u32,
+}
+impl ::prost::Name for IndexerOrderId {
+    const NAME: &'static str = "IndexerOrderId";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.protocol.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.protocol.v1.IndexerOrderId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.protocol.v1.IndexerOrderId".into()
+    }
 }
 /// IndexerOrderV1 represents a single order belonging to a `Subaccount`
 /// for a particular `ClobPair`.
@@ -302,6 +342,16 @@ pub mod indexer_order {
         /// conditional order.
         #[prost(fixed32, tag = "6")]
         GoodTilBlockTime(u32),
+    }
+}
+impl ::prost::Name for IndexerOrder {
+    const NAME: &'static str = "IndexerOrder";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.protocol.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.protocol.v1.IndexerOrder".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.protocol.v1.IndexerOrder".into()
     }
 }
 /// Status of the CLOB.

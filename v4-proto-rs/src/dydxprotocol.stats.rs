@@ -7,6 +7,16 @@ pub struct Params {
     #[prost(message, optional, tag = "1")]
     pub window_duration: ::core::option::Option<::prost_types::Duration>,
 }
+impl ::prost::Name for Params {
+    const NAME: &'static str = "Params";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.Params".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.Params".into()
+    }
+}
 /// GenesisState defines the stats module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -14,6 +24,16 @@ pub struct GenesisState {
     /// The parameters of the module.
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<Params>,
+}
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.GenesisState".into()
+    }
 }
 /// BlockStats is used to store stats transiently within the scope of a block.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -39,6 +59,26 @@ pub mod block_stats {
         #[prost(uint64, tag = "3")]
         pub notional: u64,
     }
+    impl ::prost::Name for Fill {
+        const NAME: &'static str = "Fill";
+        const PACKAGE: &'static str = "dydxprotocol.stats";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.stats.BlockStats.Fill".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.stats.BlockStats.Fill".into()
+        }
+    }
+}
+impl ::prost::Name for BlockStats {
+    const NAME: &'static str = "BlockStats";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.BlockStats".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.BlockStats".into()
+    }
 }
 /// StatsMetadata stores metadata for the x/stats module
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -48,6 +88,16 @@ pub struct StatsMetadata {
     /// removed from the window.
     #[prost(uint32, tag = "1")]
     pub trailing_epoch: u32,
+}
+impl ::prost::Name for StatsMetadata {
+    const NAME: &'static str = "StatsMetadata";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.StatsMetadata".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.StatsMetadata".into()
+    }
 }
 /// EpochStats stores stats for a particular epoch
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -71,6 +121,26 @@ pub mod epoch_stats {
         #[prost(message, optional, tag = "2")]
         pub stats: ::core::option::Option<super::UserStats>,
     }
+    impl ::prost::Name for UserWithStats {
+        const NAME: &'static str = "UserWithStats";
+        const PACKAGE: &'static str = "dydxprotocol.stats";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.stats.EpochStats.UserWithStats".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.stats.EpochStats.UserWithStats".into()
+        }
+    }
+}
+impl ::prost::Name for EpochStats {
+    const NAME: &'static str = "EpochStats";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.EpochStats".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.EpochStats".into()
+    }
 }
 /// GlobalStats stores global stats
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -79,6 +149,16 @@ pub struct GlobalStats {
     /// Notional USDC traded in quantums
     #[prost(uint64, tag = "1")]
     pub notional_traded: u64,
+}
+impl ::prost::Name for GlobalStats {
+    const NAME: &'static str = "GlobalStats";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.GlobalStats".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.GlobalStats".into()
+    }
 }
 /// UserStats stores stats for a User
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -91,10 +171,30 @@ pub struct UserStats {
     #[prost(uint64, tag = "2")]
     pub maker_notional: u64,
 }
+impl ::prost::Name for UserStats {
+    const NAME: &'static str = "UserStats";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.UserStats".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.UserStats".into()
+    }
+}
 /// QueryParamsRequest is a request type for the Params RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryParamsRequest {}
+impl ::prost::Name for QueryParamsRequest {
+    const NAME: &'static str = "QueryParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.QueryParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.QueryParamsRequest".into()
+    }
+}
 /// QueryParamsResponse is a response type for the Params RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -102,10 +202,30 @@ pub struct QueryParamsResponse {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<Params>,
 }
+impl ::prost::Name for QueryParamsResponse {
+    const NAME: &'static str = "QueryParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.QueryParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.QueryParamsResponse".into()
+    }
+}
 /// QueryStatsMetadataRequest is a request type for the StatsMetadata RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryStatsMetadataRequest {}
+impl ::prost::Name for QueryStatsMetadataRequest {
+    const NAME: &'static str = "QueryStatsMetadataRequest";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.QueryStatsMetadataRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.QueryStatsMetadataRequest".into()
+    }
+}
 /// QueryStatsMetadataResponse is a response type for the StatsMetadata RPC
 /// method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -114,16 +234,46 @@ pub struct QueryStatsMetadataResponse {
     #[prost(message, optional, tag = "1")]
     pub metadata: ::core::option::Option<StatsMetadata>,
 }
+impl ::prost::Name for QueryStatsMetadataResponse {
+    const NAME: &'static str = "QueryStatsMetadataResponse";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.QueryStatsMetadataResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.QueryStatsMetadataResponse".into()
+    }
+}
 /// QueryGlobalStatsRequest is a request type for the GlobalStats RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryGlobalStatsRequest {}
+impl ::prost::Name for QueryGlobalStatsRequest {
+    const NAME: &'static str = "QueryGlobalStatsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.QueryGlobalStatsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.QueryGlobalStatsRequest".into()
+    }
+}
 /// QueryGlobalStatsResponse is a response type for the GlobalStats RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryGlobalStatsResponse {
     #[prost(message, optional, tag = "1")]
     pub stats: ::core::option::Option<GlobalStats>,
+}
+impl ::prost::Name for QueryGlobalStatsResponse {
+    const NAME: &'static str = "QueryGlobalStatsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.QueryGlobalStatsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.QueryGlobalStatsResponse".into()
+    }
 }
 /// QueryUserStatsRequest is a request type for the UserStats RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -132,12 +282,32 @@ pub struct QueryUserStatsRequest {
     #[prost(string, tag = "1")]
     pub user: ::prost::alloc::string::String,
 }
+impl ::prost::Name for QueryUserStatsRequest {
+    const NAME: &'static str = "QueryUserStatsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.QueryUserStatsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.QueryUserStatsRequest".into()
+    }
+}
 /// QueryUserStatsResponse is a request type for the UserStats RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryUserStatsResponse {
     #[prost(message, optional, tag = "1")]
     pub stats: ::core::option::Option<UserStats>,
+}
+impl ::prost::Name for QueryUserStatsResponse {
+    const NAME: &'static str = "QueryUserStatsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.QueryUserStatsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.QueryUserStatsResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -341,10 +511,30 @@ pub struct MsgUpdateParams {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<Params>,
 }
+impl ::prost::Name for MsgUpdateParams {
+    const NAME: &'static str = "MsgUpdateParams";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.MsgUpdateParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.MsgUpdateParams".into()
+    }
+}
 /// MsgUpdateParamsResponse is the Msg/UpdateParams response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateParamsResponse {}
+impl ::prost::Name for MsgUpdateParamsResponse {
+    const NAME: &'static str = "MsgUpdateParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.stats";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.stats.MsgUpdateParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.stats.MsgUpdateParamsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

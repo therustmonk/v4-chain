@@ -73,6 +73,16 @@ pub mod order_place_v1 {
         }
     }
 }
+impl ::prost::Name for OrderPlaceV1 {
+    const NAME: &'static str = "OrderPlaceV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.off_chain_updates";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.off_chain_updates.OrderPlaceV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.off_chain_updates.OrderPlaceV1".into()
+    }
+}
 /// OrderRemove messages contain the id of the order removed, the reason for the
 /// removal and the resulting status from the removal.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -156,6 +166,16 @@ pub mod order_remove_v1 {
         }
     }
 }
+impl ::prost::Name for OrderRemoveV1 {
+    const NAME: &'static str = "OrderRemoveV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.off_chain_updates";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.off_chain_updates.OrderRemoveV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.off_chain_updates.OrderRemoveV1".into()
+    }
+}
 /// OrderUpdate messages contain the id of the order being updated, and the
 /// updated total filled quantums of the order.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -165,6 +185,16 @@ pub struct OrderUpdateV1 {
     pub order_id: ::core::option::Option<super::protocol::v1::IndexerOrderId>,
     #[prost(uint64, tag = "2")]
     pub total_filled_quantums: u64,
+}
+impl ::prost::Name for OrderUpdateV1 {
+    const NAME: &'static str = "OrderUpdateV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.off_chain_updates";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.off_chain_updates.OrderUpdateV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.off_chain_updates.OrderUpdateV1".into()
+    }
 }
 /// OrderReplace messages contain the replacement order.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -176,6 +206,16 @@ pub struct OrderReplaceV1 {
     pub placement_status: i32,
     #[prost(message, optional, tag = "3")]
     pub time_stamp: ::core::option::Option<::prost_types::Timestamp>,
+}
+impl ::prost::Name for OrderReplaceV1 {
+    const NAME: &'static str = "OrderReplaceV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.off_chain_updates";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.off_chain_updates.OrderReplaceV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.off_chain_updates.OrderReplaceV1".into()
+    }
 }
 /// An OffChainUpdate message is the message type which will be sent on Kafka to
 /// the Indexer.
@@ -202,5 +242,15 @@ pub mod off_chain_update_v1 {
         OrderUpdate(super::OrderUpdateV1),
         #[prost(message, tag = "4")]
         OrderReplace(super::OrderReplaceV1),
+    }
+}
+impl ::prost::Name for OffChainUpdateV1 {
+    const NAME: &'static str = "OffChainUpdateV1";
+    const PACKAGE: &'static str = "dydxprotocol.indexer.off_chain_updates";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.indexer.off_chain_updates.OffChainUpdateV1".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.indexer.off_chain_updates.OffChainUpdateV1".into()
     }
 }

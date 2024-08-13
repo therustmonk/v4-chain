@@ -7,6 +7,7 @@ fn main() -> Result<(), tonic_buf_build::error::TonicBufBuildError> {
         let mut config = Config::new();
         config.out_dir("src");
         config.include_file("_includes.rs");
+        config.enable_type_names();
         let mut path = PathBuf::from(
             env::var("CARGO_MANIFEST_DIR").expect("cargo sets CARGO_MANIFEST_DIR env var"),
         );

@@ -25,11 +25,31 @@ pub struct LiquidateSubaccountsRequest {
         super::super::clob::SubaccountOpenPositionInfo,
     >,
 }
+impl ::prost::Name for LiquidateSubaccountsRequest {
+    const NAME: &'static str = "LiquidateSubaccountsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.daemons.liquidation";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.daemons.liquidation.LiquidateSubaccountsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.daemons.liquidation.LiquidateSubaccountsRequest".into()
+    }
+}
 /// LiquidateSubaccountsResponse is a response message for
 /// LiquidateSubaccountsRequest.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LiquidateSubaccountsResponse {}
+impl ::prost::Name for LiquidateSubaccountsResponse {
+    const NAME: &'static str = "LiquidateSubaccountsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.daemons.liquidation";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.daemons.liquidation.LiquidateSubaccountsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.daemons.liquidation.LiquidateSubaccountsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod liquidation_service_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
