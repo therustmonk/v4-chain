@@ -27,6 +27,7 @@ use v4_proto_rs::dydxprotocol::clob::{
     MsgPlaceOrder, Order, OrderId,
 };
 use v4_proto_rs::dydxprotocol::subaccounts::SubaccountId;
+use v4_proto_rs::ToAny;
 
 const TIMEOUT_MILLIS: u64 = 1000;
 const ETH_USD_PAIR_ID: u32 = 1; // information on market id can be fetch from indexer API
@@ -155,7 +156,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let msg = prepare_order(subaccount, address)?;
 
     // Build and sign transaction
-    let tx_body = tx::BodyBuilder::new().msg(msg).memo("").finish();
+    let tx_body = tx::BodyBuilder::new().msg(msg.to_any()).memo("").finish();
     let amount = Coin {
         amount: 0u8.into(),
         denom: DYDX_FEE_DENOM.parse()?,
