@@ -40,12 +40,32 @@ pub struct Asset {
     #[prost(sint32, tag = "7")]
     pub atomic_resolution: i32,
 }
+impl ::prost::Name for Asset {
+    const NAME: &'static str = "Asset";
+    const PACKAGE: &'static str = "dydxprotocol.assets";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.assets.Asset".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.assets.Asset".into()
+    }
+}
 /// GenesisState defines the assets module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenesisState {
     #[prost(message, repeated, tag = "1")]
     pub assets: ::prost::alloc::vec::Vec<Asset>,
+}
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.assets";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.assets.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.assets.GenesisState".into()
+    }
 }
 /// Queries an Asset by id.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -54,12 +74,32 @@ pub struct QueryAssetRequest {
     #[prost(uint32, tag = "1")]
     pub id: u32,
 }
+impl ::prost::Name for QueryAssetRequest {
+    const NAME: &'static str = "QueryAssetRequest";
+    const PACKAGE: &'static str = "dydxprotocol.assets";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.assets.QueryAssetRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.assets.QueryAssetRequest".into()
+    }
+}
 /// QueryAssetResponse is response type for the Asset RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryAssetResponse {
     #[prost(message, optional, tag = "1")]
     pub asset: ::core::option::Option<Asset>,
+}
+impl ::prost::Name for QueryAssetResponse {
+    const NAME: &'static str = "QueryAssetResponse";
+    const PACKAGE: &'static str = "dydxprotocol.assets";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.assets.QueryAssetResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.assets.QueryAssetResponse".into()
+    }
 }
 /// Queries a list of Asset items.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -69,6 +109,16 @@ pub struct QueryAllAssetsRequest {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
+}
+impl ::prost::Name for QueryAllAssetsRequest {
+    const NAME: &'static str = "QueryAllAssetsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.assets";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.assets.QueryAllAssetsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.assets.QueryAllAssetsRequest".into()
+    }
 }
 /// QueryAllAssetsResponse is response type for the AllAssets RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -80,6 +130,16 @@ pub struct QueryAllAssetsResponse {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
+}
+impl ::prost::Name for QueryAllAssetsResponse {
+    const NAME: &'static str = "QueryAllAssetsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.assets";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.assets.QueryAllAssetsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.assets.QueryAllAssetsResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {

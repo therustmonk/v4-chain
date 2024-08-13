@@ -16,6 +16,16 @@ pub struct BridgeEvent {
     #[prost(uint64, tag = "4")]
     pub eth_block_height: u64,
 }
+impl ::prost::Name for BridgeEvent {
+    const NAME: &'static str = "BridgeEvent";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.BridgeEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.BridgeEvent".into()
+    }
+}
 /// BridgeEventInfo stores information about the most recently processed bridge
 /// event.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -28,6 +38,16 @@ pub struct BridgeEventInfo {
     /// The Ethereum block height of the most recently processed bridge event.
     #[prost(uint64, tag = "2")]
     pub eth_block_height: u64,
+}
+impl ::prost::Name for BridgeEventInfo {
+    const NAME: &'static str = "BridgeEventInfo";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.BridgeEventInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.BridgeEventInfo".into()
+    }
 }
 /// EventParams stores parameters about which events to recognize and which
 /// tokens to mint.
@@ -43,6 +63,16 @@ pub struct EventParams {
     /// The address of the Ethereum contract to monitor for logs.
     #[prost(string, tag = "3")]
     pub eth_address: ::prost::alloc::string::String,
+}
+impl ::prost::Name for EventParams {
+    const NAME: &'static str = "EventParams";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.EventParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.EventParams".into()
+    }
 }
 /// ProposeParams stores parameters for proposing to the module.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -71,6 +101,16 @@ pub struct ProposeParams {
         ::prost_types::Duration,
     >,
 }
+impl ::prost::Name for ProposeParams {
+    const NAME: &'static str = "ProposeParams";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.ProposeParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.ProposeParams".into()
+    }
+}
 /// SafetyParams stores safety parameters for the module.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -82,6 +122,16 @@ pub struct SafetyParams {
     /// until the minted tokens are granted.
     #[prost(uint32, tag = "2")]
     pub delay_blocks: u32,
+}
+impl ::prost::Name for SafetyParams {
+    const NAME: &'static str = "SafetyParams";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.SafetyParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.SafetyParams".into()
+    }
 }
 /// GenesisState defines the bridge module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -100,6 +150,16 @@ pub struct GenesisState {
     #[prost(message, optional, tag = "4")]
     pub acknowledged_event_info: ::core::option::Option<BridgeEventInfo>,
 }
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.GenesisState".into()
+    }
+}
 /// MsgAcknowledgeBridges is the Msg/AcknowledgeBridges request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -108,11 +168,31 @@ pub struct MsgAcknowledgeBridges {
     #[prost(message, repeated, tag = "1")]
     pub events: ::prost::alloc::vec::Vec<BridgeEvent>,
 }
+impl ::prost::Name for MsgAcknowledgeBridges {
+    const NAME: &'static str = "MsgAcknowledgeBridges";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgAcknowledgeBridges".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgAcknowledgeBridges".into()
+    }
+}
 /// MsgAcknowledgeBridgesResponse is the Msg/AcknowledgeBridgesResponse response
 /// type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgAcknowledgeBridgesResponse {}
+impl ::prost::Name for MsgAcknowledgeBridgesResponse {
+    const NAME: &'static str = "MsgAcknowledgeBridgesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgAcknowledgeBridgesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgAcknowledgeBridgesResponse".into()
+    }
+}
 /// MsgCompleteBridge is the Msg/CompleteBridgeResponse request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -123,10 +203,30 @@ pub struct MsgCompleteBridge {
     #[prost(message, optional, tag = "2")]
     pub event: ::core::option::Option<BridgeEvent>,
 }
+impl ::prost::Name for MsgCompleteBridge {
+    const NAME: &'static str = "MsgCompleteBridge";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgCompleteBridge".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgCompleteBridge".into()
+    }
+}
 /// MsgCompleteBridgeResponse is the Msg/CompleteBridgeResponse response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgCompleteBridgeResponse {}
+impl ::prost::Name for MsgCompleteBridgeResponse {
+    const NAME: &'static str = "MsgCompleteBridgeResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgCompleteBridgeResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgCompleteBridgeResponse".into()
+    }
+}
 /// MsgUpdateEventParams is the Msg/UpdateEventParams request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -137,10 +237,30 @@ pub struct MsgUpdateEventParams {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<EventParams>,
 }
+impl ::prost::Name for MsgUpdateEventParams {
+    const NAME: &'static str = "MsgUpdateEventParams";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgUpdateEventParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgUpdateEventParams".into()
+    }
+}
 /// MsgUpdateEventParamsResponse is the Msg/UpdateEventParams response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateEventParamsResponse {}
+impl ::prost::Name for MsgUpdateEventParamsResponse {
+    const NAME: &'static str = "MsgUpdateEventParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgUpdateEventParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgUpdateEventParamsResponse".into()
+    }
+}
 /// MsgUpdateProposeParams is the Msg/UpdateProposeParams request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -151,10 +271,30 @@ pub struct MsgUpdateProposeParams {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<ProposeParams>,
 }
+impl ::prost::Name for MsgUpdateProposeParams {
+    const NAME: &'static str = "MsgUpdateProposeParams";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgUpdateProposeParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgUpdateProposeParams".into()
+    }
+}
 /// MsgUpdateProposeParamsResponse is the Msg/UpdateProposeParams response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateProposeParamsResponse {}
+impl ::prost::Name for MsgUpdateProposeParamsResponse {
+    const NAME: &'static str = "MsgUpdateProposeParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgUpdateProposeParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgUpdateProposeParamsResponse".into()
+    }
+}
 /// MsgUpdateSafetyParams is the Msg/UpdateSafetyParams request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -165,10 +305,30 @@ pub struct MsgUpdateSafetyParams {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<SafetyParams>,
 }
+impl ::prost::Name for MsgUpdateSafetyParams {
+    const NAME: &'static str = "MsgUpdateSafetyParams";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgUpdateSafetyParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgUpdateSafetyParams".into()
+    }
+}
 /// MsgUpdateSafetyParamsResponse is the Msg/UpdateSafetyParams response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateSafetyParamsResponse {}
+impl ::prost::Name for MsgUpdateSafetyParamsResponse {
+    const NAME: &'static str = "MsgUpdateSafetyParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.MsgUpdateSafetyParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.MsgUpdateSafetyParamsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
@@ -398,6 +558,16 @@ pub mod msg_client {
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryEventParamsRequest {}
+impl ::prost::Name for QueryEventParamsRequest {
+    const NAME: &'static str = "QueryEventParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryEventParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryEventParamsRequest".into()
+    }
+}
 /// QueryEventParamsResponse is a response type for the EventParams RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -405,10 +575,30 @@ pub struct QueryEventParamsResponse {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<EventParams>,
 }
+impl ::prost::Name for QueryEventParamsResponse {
+    const NAME: &'static str = "QueryEventParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryEventParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryEventParamsResponse".into()
+    }
+}
 /// QueryProposeParamsRequest is a request type for the ProposeParams RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryProposeParamsRequest {}
+impl ::prost::Name for QueryProposeParamsRequest {
+    const NAME: &'static str = "QueryProposeParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryProposeParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryProposeParamsRequest".into()
+    }
+}
 /// QueryProposeParamsResponse is a response type for the ProposeParams RPC
 /// method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -417,10 +607,30 @@ pub struct QueryProposeParamsResponse {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<ProposeParams>,
 }
+impl ::prost::Name for QueryProposeParamsResponse {
+    const NAME: &'static str = "QueryProposeParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryProposeParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryProposeParamsResponse".into()
+    }
+}
 /// QuerySafetyParamsRequest is a request type for the SafetyParams RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuerySafetyParamsRequest {}
+impl ::prost::Name for QuerySafetyParamsRequest {
+    const NAME: &'static str = "QuerySafetyParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QuerySafetyParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QuerySafetyParamsRequest".into()
+    }
+}
 /// QuerySafetyParamsResponse is a response type for the SafetyParams RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -428,11 +638,31 @@ pub struct QuerySafetyParamsResponse {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<SafetyParams>,
 }
+impl ::prost::Name for QuerySafetyParamsResponse {
+    const NAME: &'static str = "QuerySafetyParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QuerySafetyParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QuerySafetyParamsResponse".into()
+    }
+}
 /// QueryAcknowledgedEventInfoRequest is a request type for the
 /// AcknowledgedEventInfo RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryAcknowledgedEventInfoRequest {}
+impl ::prost::Name for QueryAcknowledgedEventInfoRequest {
+    const NAME: &'static str = "QueryAcknowledgedEventInfoRequest";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryAcknowledgedEventInfoRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryAcknowledgedEventInfoRequest".into()
+    }
+}
 /// QueryAcknowledgedEventInfoResponse is a response type for the
 /// AcknowledgedEventInfo RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -441,11 +671,31 @@ pub struct QueryAcknowledgedEventInfoResponse {
     #[prost(message, optional, tag = "1")]
     pub info: ::core::option::Option<BridgeEventInfo>,
 }
+impl ::prost::Name for QueryAcknowledgedEventInfoResponse {
+    const NAME: &'static str = "QueryAcknowledgedEventInfoResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryAcknowledgedEventInfoResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryAcknowledgedEventInfoResponse".into()
+    }
+}
 /// QueryRecognizedEventInfoRequest is a request type for the
 /// RecognizedEventInfo RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryRecognizedEventInfoRequest {}
+impl ::prost::Name for QueryRecognizedEventInfoRequest {
+    const NAME: &'static str = "QueryRecognizedEventInfoRequest";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryRecognizedEventInfoRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryRecognizedEventInfoRequest".into()
+    }
+}
 /// QueryRecognizedEventInfoResponse is a response type for the
 /// RecognizedEventInfo RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -453,6 +703,16 @@ pub struct QueryRecognizedEventInfoRequest {}
 pub struct QueryRecognizedEventInfoResponse {
     #[prost(message, optional, tag = "1")]
     pub info: ::core::option::Option<BridgeEventInfo>,
+}
+impl ::prost::Name for QueryRecognizedEventInfoResponse {
+    const NAME: &'static str = "QueryRecognizedEventInfoResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryRecognizedEventInfoResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryRecognizedEventInfoResponse".into()
+    }
 }
 /// QueryDelayedCompleteBridgeMessagesRequest is a request type for the
 /// DelayedCompleteBridgeMessages RPC method.
@@ -462,6 +722,16 @@ pub struct QueryDelayedCompleteBridgeMessagesRequest {
     #[prost(string, tag = "1")]
     pub address: ::prost::alloc::string::String,
 }
+impl ::prost::Name for QueryDelayedCompleteBridgeMessagesRequest {
+    const NAME: &'static str = "QueryDelayedCompleteBridgeMessagesRequest";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryDelayedCompleteBridgeMessagesRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryDelayedCompleteBridgeMessagesRequest".into()
+    }
+}
 /// QueryDelayedCompleteBridgeMessagesResponse is a response type for the
 /// DelayedCompleteBridgeMessages RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -469,6 +739,16 @@ pub struct QueryDelayedCompleteBridgeMessagesRequest {
 pub struct QueryDelayedCompleteBridgeMessagesResponse {
     #[prost(message, repeated, tag = "1")]
     pub messages: ::prost::alloc::vec::Vec<DelayedCompleteBridgeMessage>,
+}
+impl ::prost::Name for QueryDelayedCompleteBridgeMessagesResponse {
+    const NAME: &'static str = "QueryDelayedCompleteBridgeMessagesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.QueryDelayedCompleteBridgeMessagesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.QueryDelayedCompleteBridgeMessagesResponse".into()
+    }
 }
 /// DelayedCompleteBridgeMessage is a message type for the response of
 /// DelayedCompleteBridgeMessages RPC method. It contains the message
@@ -480,6 +760,16 @@ pub struct DelayedCompleteBridgeMessage {
     pub message: ::core::option::Option<MsgCompleteBridge>,
     #[prost(uint32, tag = "2")]
     pub block_height: u32,
+}
+impl ::prost::Name for DelayedCompleteBridgeMessage {
+    const NAME: &'static str = "DelayedCompleteBridgeMessage";
+    const PACKAGE: &'static str = "dydxprotocol.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.bridge.DelayedCompleteBridgeMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.bridge.DelayedCompleteBridgeMessage".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {

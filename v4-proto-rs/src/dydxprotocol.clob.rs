@@ -50,6 +50,16 @@ pub struct BlockRateLimitConfiguration {
         MaxPerNBlocksRateLimit,
     >,
 }
+impl ::prost::Name for BlockRateLimitConfiguration {
+    const NAME: &'static str = "BlockRateLimitConfiguration";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.BlockRateLimitConfiguration".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.BlockRateLimitConfiguration".into()
+    }
+}
 /// Defines a rate limit over a specific number of blocks.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -63,6 +73,16 @@ pub struct MaxPerNBlocksRateLimit {
     #[prost(uint32, tag = "2")]
     pub limit: u32,
 }
+impl ::prost::Name for MaxPerNBlocksRateLimit {
+    const NAME: &'static str = "MaxPerNBlocksRateLimit";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MaxPerNBlocksRateLimit".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MaxPerNBlocksRateLimit".into()
+    }
+}
 /// PerpetualClobMetadata contains metadata for a `ClobPair`
 /// representing a Perpetual product.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -71,6 +91,16 @@ pub struct PerpetualClobMetadata {
     /// Id of the Perpetual the CLOB allows trading of.
     #[prost(uint32, tag = "1")]
     pub perpetual_id: u32,
+}
+impl ::prost::Name for PerpetualClobMetadata {
+    const NAME: &'static str = "PerpetualClobMetadata";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.PerpetualClobMetadata".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.PerpetualClobMetadata".into()
+    }
 }
 /// PerpetualClobMetadata contains metadata for a `ClobPair`
 /// representing a Spot product.
@@ -83,6 +113,16 @@ pub struct SpotClobMetadata {
     /// Id of the quote Asset in the trading pair.
     #[prost(uint32, tag = "2")]
     pub quote_asset_id: u32,
+}
+impl ::prost::Name for SpotClobMetadata {
+    const NAME: &'static str = "SpotClobMetadata";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.SpotClobMetadata".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.SpotClobMetadata".into()
+    }
 }
 /// ClobPair represents a single CLOB pair for a given product
 /// in state.
@@ -192,6 +232,16 @@ pub mod clob_pair {
         SpotClobMetadata(super::SpotClobMetadata),
     }
 }
+impl ::prost::Name for ClobPair {
+    const NAME: &'static str = "ClobPair";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.ClobPair".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.ClobPair".into()
+    }
+}
 /// Defines the set of equity tiers to limit how many open orders
 /// a subaccount is allowed to have.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -206,6 +256,16 @@ pub struct EquityTierLimitConfiguration {
     #[prost(message, repeated, tag = "2")]
     pub stateful_order_equity_tiers: ::prost::alloc::vec::Vec<EquityTierLimit>,
 }
+impl ::prost::Name for EquityTierLimitConfiguration {
+    const NAME: &'static str = "EquityTierLimitConfiguration";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.EquityTierLimitConfiguration".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.EquityTierLimitConfiguration".into()
+    }
+}
 /// Defines an equity tier limit.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -216,6 +276,16 @@ pub struct EquityTierLimit {
     /// What the limit is for `usd_tnc_required`.
     #[prost(uint32, tag = "2")]
     pub limit: u32,
+}
+impl ::prost::Name for EquityTierLimit {
+    const NAME: &'static str = "EquityTierLimit";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.EquityTierLimit".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.EquityTierLimit".into()
+    }
 }
 /// LiquidationsConfig stores all configurable fields related to liquidations.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -238,6 +308,16 @@ pub struct LiquidationsConfig {
     #[prost(message, optional, tag = "4")]
     pub fillable_price_config: ::core::option::Option<FillablePriceConfig>,
 }
+impl ::prost::Name for LiquidationsConfig {
+    const NAME: &'static str = "LiquidationsConfig";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.LiquidationsConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.LiquidationsConfig".into()
+    }
+}
 /// PositionBlockLimits stores all configurable fields related to limits
 /// around how much of a single position can be liquidated within a single block.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -252,6 +332,16 @@ pub struct PositionBlockLimits {
     /// million). Overridden by min_position_notional_liquidated.
     #[prost(uint32, tag = "2")]
     pub max_position_portion_liquidated_ppm: u32,
+}
+impl ::prost::Name for PositionBlockLimits {
+    const NAME: &'static str = "PositionBlockLimits";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.PositionBlockLimits".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.PositionBlockLimits".into()
+    }
 }
 /// SubaccountBlockLimits stores all configurable fields related to limits
 /// around how many quote quantums from a single subaccount can
@@ -268,6 +358,16 @@ pub struct SubaccountBlockLimits {
     #[prost(uint64, tag = "2")]
     pub max_quantums_insurance_lost: u64,
 }
+impl ::prost::Name for SubaccountBlockLimits {
+    const NAME: &'static str = "SubaccountBlockLimits";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.SubaccountBlockLimits".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.SubaccountBlockLimits".into()
+    }
+}
 /// FillablePriceConfig stores all configurable fields related to calculating
 /// the fillable price for liquidating a position.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -281,6 +381,16 @@ pub struct FillablePriceConfig {
     #[prost(uint32, tag = "2")]
     pub spread_to_maintenance_margin_ratio_ppm: u32,
 }
+impl ::prost::Name for FillablePriceConfig {
+    const NAME: &'static str = "FillablePriceConfig";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.FillablePriceConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.FillablePriceConfig".into()
+    }
+}
 /// GenesisState defines the clob module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -293,6 +403,16 @@ pub struct GenesisState {
     pub block_rate_limit_config: ::core::option::Option<BlockRateLimitConfiguration>,
     #[prost(message, optional, tag = "4")]
     pub equity_tier_limit_config: ::core::option::Option<EquityTierLimitConfiguration>,
+}
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.GenesisState".into()
+    }
 }
 /// PerpetualLiquidationInfo holds information about a liquidation that occurred
 /// for a position held by a subaccount.
@@ -308,6 +428,16 @@ pub struct PerpetualLiquidationInfo {
     /// The id of the perpetual involved.
     #[prost(uint32, tag = "2")]
     pub perpetual_id: u32,
+}
+impl ::prost::Name for PerpetualLiquidationInfo {
+    const NAME: &'static str = "PerpetualLiquidationInfo";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.PerpetualLiquidationInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.PerpetualLiquidationInfo".into()
+    }
 }
 /// SubaccountLiquidationInfo holds liquidation information per-subaccount in the
 /// current block.
@@ -327,6 +457,16 @@ pub struct SubaccountLiquidationInfo {
     #[prost(uint64, tag = "3")]
     pub quantums_insurance_lost: u64,
 }
+impl ::prost::Name for SubaccountLiquidationInfo {
+    const NAME: &'static str = "SubaccountLiquidationInfo";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.SubaccountLiquidationInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.SubaccountLiquidationInfo".into()
+    }
+}
 /// SubaccountOpenPositionInfo holds information about open positions for a
 /// perpetual.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -345,6 +485,16 @@ pub struct SubaccountOpenPositionInfo {
     pub subaccounts_with_short_position: ::prost::alloc::vec::Vec<
         super::subaccounts::SubaccountId,
     >,
+}
+impl ::prost::Name for SubaccountOpenPositionInfo {
+    const NAME: &'static str = "SubaccountOpenPositionInfo";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.SubaccountOpenPositionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.SubaccountOpenPositionInfo".into()
+    }
 }
 /// OrderId refers to a single order belonging to a Subaccount.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -381,6 +531,16 @@ pub struct OrderId {
     #[prost(uint32, tag = "4")]
     pub clob_pair_id: u32,
 }
+impl ::prost::Name for OrderId {
+    const NAME: &'static str = "OrderId";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.OrderId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.OrderId".into()
+    }
+}
 /// OrdersFilledDuringLatestBlock represents a list of `OrderIds` that were
 /// filled by any non-zero amount in the latest block.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -391,6 +551,16 @@ pub struct OrdersFilledDuringLatestBlock {
     #[prost(message, repeated, tag = "1")]
     pub order_ids: ::prost::alloc::vec::Vec<OrderId>,
 }
+impl ::prost::Name for OrdersFilledDuringLatestBlock {
+    const NAME: &'static str = "OrdersFilledDuringLatestBlock";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.OrdersFilledDuringLatestBlock".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.OrdersFilledDuringLatestBlock".into()
+    }
+}
 /// PotentiallyPrunableOrders represents a list of orders that may be prunable
 /// from state at a future block height.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -400,6 +570,16 @@ pub struct PotentiallyPrunableOrders {
     /// future block height.
     #[prost(message, repeated, tag = "1")]
     pub order_ids: ::prost::alloc::vec::Vec<OrderId>,
+}
+impl ::prost::Name for PotentiallyPrunableOrders {
+    const NAME: &'static str = "PotentiallyPrunableOrders";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.PotentiallyPrunableOrders".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.PotentiallyPrunableOrders".into()
+    }
 }
 /// OrderFillState represents the fill amount of an order according to on-chain
 /// state. This proto includes both the current on-chain fill amount of the
@@ -415,6 +595,16 @@ pub struct OrderFillState {
     /// pruned.
     #[prost(uint32, tag = "2")]
     pub prunable_block_height: u32,
+}
+impl ::prost::Name for OrderFillState {
+    const NAME: &'static str = "OrderFillState";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.OrderFillState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.OrderFillState".into()
+    }
 }
 /// StatefulOrderTimeSliceValue represents the type of the value of the
 /// `StatefulOrdersTimeSlice` in state. The `StatefulOrdersTimeSlice`
@@ -433,6 +623,16 @@ pub struct StatefulOrderTimeSliceValue {
     #[prost(message, repeated, tag = "1")]
     pub order_ids: ::prost::alloc::vec::Vec<OrderId>,
 }
+impl ::prost::Name for StatefulOrderTimeSliceValue {
+    const NAME: &'static str = "StatefulOrderTimeSliceValue";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.StatefulOrderTimeSliceValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.StatefulOrderTimeSliceValue".into()
+    }
+}
 /// LongTermOrderPlacement represents the placement of a stateful order in
 /// state. It stores the stateful order itself and the `BlockHeight` and
 /// `TransactionIndex` at which the order was placed.
@@ -445,6 +645,16 @@ pub struct LongTermOrderPlacement {
     /// Used for ordering by time priority when the chain is restarted.
     #[prost(message, optional, tag = "2")]
     pub placement_index: ::core::option::Option<TransactionOrdering>,
+}
+impl ::prost::Name for LongTermOrderPlacement {
+    const NAME: &'static str = "LongTermOrderPlacement";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.LongTermOrderPlacement".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.LongTermOrderPlacement".into()
+    }
 }
 /// ConditionalOrderPlacement represents the placement of a conditional order in
 /// state. It stores the stateful order itself, the `BlockHeight` and
@@ -462,6 +672,16 @@ pub struct ConditionalOrderPlacement {
     /// Used for ordering by time priority when the chain is restarted.
     #[prost(message, optional, tag = "3")]
     pub trigger_index: ::core::option::Option<TransactionOrdering>,
+}
+impl ::prost::Name for ConditionalOrderPlacement {
+    const NAME: &'static str = "ConditionalOrderPlacement";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.ConditionalOrderPlacement".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.ConditionalOrderPlacement".into()
+    }
 }
 /// Order represents a single order belonging to a `Subaccount`
 /// for a particular `ClobPair`.
@@ -682,6 +902,16 @@ pub mod order {
         GoodTilBlockTime(u32),
     }
 }
+impl ::prost::Name for Order {
+    const NAME: &'static str = "Order";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.Order".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.Order".into()
+    }
+}
 /// TransactionOrdering represents a unique location in the block where a
 /// transaction was placed. This proto includes both block height and the
 /// transaction index that the specific transaction was placed. This information
@@ -695,6 +925,16 @@ pub struct TransactionOrdering {
     /// Within the block, the unique transaction index.
     #[prost(uint32, tag = "2")]
     pub transaction_index: u32,
+}
+impl ::prost::Name for TransactionOrdering {
+    const NAME: &'static str = "TransactionOrdering";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.TransactionOrdering".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.TransactionOrdering".into()
+    }
 }
 /// ClobMatch represents an operations queue entry around all different types
 /// of matches, specifically regular matches, liquidation matches, and
@@ -720,6 +960,16 @@ pub mod clob_match {
         MatchPerpetualDeleveraging(super::MatchPerpetualDeleveraging),
     }
 }
+impl ::prost::Name for ClobMatch {
+    const NAME: &'static str = "ClobMatch";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.ClobMatch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.ClobMatch".into()
+    }
+}
 /// MakerFill represents the filled amount of a matched maker order.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -732,6 +982,16 @@ pub struct MakerFill {
     #[prost(message, optional, tag = "2")]
     pub maker_order_id: ::core::option::Option<OrderId>,
 }
+impl ::prost::Name for MakerFill {
+    const NAME: &'static str = "MakerFill";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MakerFill".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MakerFill".into()
+    }
+}
 /// MatchOrders is an injected message used for matching orders.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -742,6 +1002,16 @@ pub struct MatchOrders {
     /// An ordered list of fills created by this taker order.
     #[prost(message, repeated, tag = "2")]
     pub fills: ::prost::alloc::vec::Vec<MakerFill>,
+}
+impl ::prost::Name for MatchOrders {
+    const NAME: &'static str = "MatchOrders";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MatchOrders".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MatchOrders".into()
+    }
 }
 /// MatchPerpetualLiquidation is an injected message used for liquidating a
 /// subaccount.
@@ -766,6 +1036,16 @@ pub struct MatchPerpetualLiquidation {
     /// An ordered list of fills created by this liquidation.
     #[prost(message, repeated, tag = "6")]
     pub fills: ::prost::alloc::vec::Vec<MakerFill>,
+}
+impl ::prost::Name for MatchPerpetualLiquidation {
+    const NAME: &'static str = "MatchPerpetualLiquidation";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MatchPerpetualLiquidation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MatchPerpetualLiquidation".into()
+    }
 }
 /// MatchPerpetualDeleveraging is an injected message used for deleveraging a
 /// subaccount.
@@ -806,6 +1086,26 @@ pub mod match_perpetual_deleveraging {
         #[prost(uint64, tag = "2")]
         pub fill_amount: u64,
     }
+    impl ::prost::Name for Fill {
+        const NAME: &'static str = "Fill";
+        const PACKAGE: &'static str = "dydxprotocol.clob";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.clob.MatchPerpetualDeleveraging.Fill".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.clob.MatchPerpetualDeleveraging.Fill".into()
+        }
+    }
+}
+impl ::prost::Name for MatchPerpetualDeleveraging {
+    const NAME: &'static str = "MatchPerpetualDeleveraging";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MatchPerpetualDeleveraging".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MatchPerpetualDeleveraging".into()
+    }
 }
 /// MEVMatch represents all necessary data to calculate MEV for a regular match.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -831,6 +1131,16 @@ pub struct MevMatch {
     pub clob_pair_id: u32,
     #[prost(uint64, tag = "8")]
     pub fill_amount: u64,
+}
+impl ::prost::Name for MevMatch {
+    const NAME: &'static str = "MEVMatch";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MEVMatch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MEVMatch".into()
+    }
 }
 /// MEVLiquidationMatch represents all necessary data to calculate MEV for a
 /// liquidation.
@@ -858,6 +1168,16 @@ pub struct MevLiquidationMatch {
     #[prost(uint64, tag = "8")]
     pub fill_amount: u64,
 }
+impl ::prost::Name for MevLiquidationMatch {
+    const NAME: &'static str = "MEVLiquidationMatch";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MEVLiquidationMatch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MEVLiquidationMatch".into()
+    }
+}
 /// ClobMidPrice contains the mid price of a CLOB pair, represented by it's ID.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -866,6 +1186,16 @@ pub struct ClobMidPrice {
     pub clob_pair: ::core::option::Option<ClobPair>,
     #[prost(uint64, tag = "2")]
     pub subticks: u64,
+}
+impl ::prost::Name for ClobMidPrice {
+    const NAME: &'static str = "ClobMidPrice";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.ClobMidPrice".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.ClobMidPrice".into()
+    }
 }
 /// ValidatorMevMatches contains all matches from the validator's local
 /// operations queue.
@@ -876,6 +1206,16 @@ pub struct ValidatorMevMatches {
     pub matches: ::prost::alloc::vec::Vec<MevMatch>,
     #[prost(message, repeated, tag = "2")]
     pub liquidation_matches: ::prost::alloc::vec::Vec<MevLiquidationMatch>,
+}
+impl ::prost::Name for ValidatorMevMatches {
+    const NAME: &'static str = "ValidatorMevMatches";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.ValidatorMevMatches".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.ValidatorMevMatches".into()
+    }
 }
 /// MevNodeToNodeMetrics is a data structure for encapsulating all MEV node <>
 /// node metrics.
@@ -890,6 +1230,16 @@ pub struct MevNodeToNodeMetrics {
     pub bp_mev_matches: ::core::option::Option<ValidatorMevMatches>,
     #[prost(uint64, tag = "4")]
     pub proposal_receive_time: u64,
+}
+impl ::prost::Name for MevNodeToNodeMetrics {
+    const NAME: &'static str = "MevNodeToNodeMetrics";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MevNodeToNodeMetrics".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MevNodeToNodeMetrics".into()
+    }
 }
 /// OrderRemoval is a request type used for forced removal of stateful orders.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1006,6 +1356,16 @@ pub mod order_removal {
         }
     }
 }
+impl ::prost::Name for OrderRemoval {
+    const NAME: &'static str = "OrderRemoval";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.OrderRemoval".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.OrderRemoval".into()
+    }
+}
 /// MsgCreateClobPair is a message used by x/gov for creating a new clob pair.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1017,10 +1377,30 @@ pub struct MsgCreateClobPair {
     #[prost(message, optional, tag = "2")]
     pub clob_pair: ::core::option::Option<ClobPair>,
 }
+impl ::prost::Name for MsgCreateClobPair {
+    const NAME: &'static str = "MsgCreateClobPair";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgCreateClobPair".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgCreateClobPair".into()
+    }
+}
 /// MsgCreateClobPairResponse defines the CreateClobPair response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgCreateClobPairResponse {}
+impl ::prost::Name for MsgCreateClobPairResponse {
+    const NAME: &'static str = "MsgCreateClobPairResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgCreateClobPairResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgCreateClobPairResponse".into()
+    }
+}
 /// MsgProposedOperations is a message injected by block proposers to
 /// specify the operations that occurred in a block.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1030,11 +1410,31 @@ pub struct MsgProposedOperations {
     #[prost(message, repeated, tag = "1")]
     pub operations_queue: ::prost::alloc::vec::Vec<OperationRaw>,
 }
+impl ::prost::Name for MsgProposedOperations {
+    const NAME: &'static str = "MsgProposedOperations";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgProposedOperations".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgProposedOperations".into()
+    }
+}
 /// MsgProposedOperationsResponse is the response type of the message injected
 /// by block proposers to specify the operations that occurred in a block.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgProposedOperationsResponse {}
+impl ::prost::Name for MsgProposedOperationsResponse {
+    const NAME: &'static str = "MsgProposedOperationsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgProposedOperationsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgProposedOperationsResponse".into()
+    }
+}
 /// MsgPlaceOrder is a request type used for placing orders.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1042,10 +1442,30 @@ pub struct MsgPlaceOrder {
     #[prost(message, optional, tag = "1")]
     pub order: ::core::option::Option<Order>,
 }
+impl ::prost::Name for MsgPlaceOrder {
+    const NAME: &'static str = "MsgPlaceOrder";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgPlaceOrder".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgPlaceOrder".into()
+    }
+}
 /// MsgPlaceOrderResponse is a response type used for placing orders.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgPlaceOrderResponse {}
+impl ::prost::Name for MsgPlaceOrderResponse {
+    const NAME: &'static str = "MsgPlaceOrderResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgPlaceOrderResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgPlaceOrderResponse".into()
+    }
+}
 /// MsgCancelOrder is a request type used for canceling orders.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1075,10 +1495,30 @@ pub mod msg_cancel_order {
         GoodTilBlockTime(u32),
     }
 }
+impl ::prost::Name for MsgCancelOrder {
+    const NAME: &'static str = "MsgCancelOrder";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgCancelOrder".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgCancelOrder".into()
+    }
+}
 /// MsgCancelOrderResponse is a response type used for canceling orders.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgCancelOrderResponse {}
+impl ::prost::Name for MsgCancelOrderResponse {
+    const NAME: &'static str = "MsgCancelOrderResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgCancelOrderResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgCancelOrderResponse".into()
+    }
+}
 /// MsgBatchCancel is a request type used for batch canceling orders.
 /// This msg is not atomic. Cancels will be performed optimistically even
 /// if some cancels are invalid or fail.
@@ -1095,6 +1535,16 @@ pub struct MsgBatchCancel {
     #[prost(uint32, tag = "3")]
     pub good_til_block: u32,
 }
+impl ::prost::Name for MsgBatchCancel {
+    const NAME: &'static str = "MsgBatchCancel";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgBatchCancel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgBatchCancel".into()
+    }
+}
 /// OrderBatch represents a batch of orders all belonging to a single clob pair
 /// id. Along with a subaccount id and an order flag, is used to represent a
 /// batch of orders that share the same subaccount, order flag, and clob pair id.
@@ -1110,6 +1560,16 @@ pub struct OrderBatch {
     #[prost(uint32, repeated, tag = "2")]
     pub client_ids: ::prost::alloc::vec::Vec<u32>,
 }
+impl ::prost::Name for OrderBatch {
+    const NAME: &'static str = "OrderBatch";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.OrderBatch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.OrderBatch".into()
+    }
+}
 /// MsgBatchCancelResponse is a response type used for batch canceling orders.
 /// It indicates which cancel orders have succeeded or failed.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1122,6 +1582,16 @@ pub struct MsgBatchCancelResponse {
     #[prost(message, repeated, tag = "2")]
     pub short_term_failed: ::prost::alloc::vec::Vec<OrderBatch>,
 }
+impl ::prost::Name for MsgBatchCancelResponse {
+    const NAME: &'static str = "MsgBatchCancelResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgBatchCancelResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgBatchCancelResponse".into()
+    }
+}
 /// MsgUpdateClobPair is a request type used for updating a ClobPair in state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1133,11 +1603,31 @@ pub struct MsgUpdateClobPair {
     #[prost(message, optional, tag = "2")]
     pub clob_pair: ::core::option::Option<ClobPair>,
 }
+impl ::prost::Name for MsgUpdateClobPair {
+    const NAME: &'static str = "MsgUpdateClobPair";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgUpdateClobPair".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgUpdateClobPair".into()
+    }
+}
 /// MsgUpdateClobPairResponse is a response type used for setting a ClobPair's
 /// status.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateClobPairResponse {}
+impl ::prost::Name for MsgUpdateClobPairResponse {
+    const NAME: &'static str = "MsgUpdateClobPairResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgUpdateClobPairResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgUpdateClobPairResponse".into()
+    }
+}
 /// OperationRaw represents an operation in the proposed operations.
 /// Note that the `order_placement` operation is a signed message.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1163,6 +1653,16 @@ pub mod operation_raw {
         OrderRemoval(super::OrderRemoval),
     }
 }
+impl ::prost::Name for OperationRaw {
+    const NAME: &'static str = "OperationRaw";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.OperationRaw".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.OperationRaw".into()
+    }
+}
 /// MsgUpdateEquityTierLimitConfiguration is the Msg/EquityTierLimitConfiguration
 /// request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1175,11 +1675,31 @@ pub struct MsgUpdateEquityTierLimitConfiguration {
     #[prost(message, optional, tag = "2")]
     pub equity_tier_limit_config: ::core::option::Option<EquityTierLimitConfiguration>,
 }
+impl ::prost::Name for MsgUpdateEquityTierLimitConfiguration {
+    const NAME: &'static str = "MsgUpdateEquityTierLimitConfiguration";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgUpdateEquityTierLimitConfiguration".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgUpdateEquityTierLimitConfiguration".into()
+    }
+}
 /// MsgUpdateEquityTierLimitConfiguration is the Msg/EquityTierLimitConfiguration
 /// response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateEquityTierLimitConfigurationResponse {}
+impl ::prost::Name for MsgUpdateEquityTierLimitConfigurationResponse {
+    const NAME: &'static str = "MsgUpdateEquityTierLimitConfigurationResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgUpdateEquityTierLimitConfigurationResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgUpdateEquityTierLimitConfigurationResponse".into()
+    }
+}
 /// MsgUpdateBlockRateLimitConfiguration is the Msg/BlockRateLimitConfiguration
 /// request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1192,11 +1712,31 @@ pub struct MsgUpdateBlockRateLimitConfiguration {
     #[prost(message, optional, tag = "3")]
     pub block_rate_limit_config: ::core::option::Option<BlockRateLimitConfiguration>,
 }
+impl ::prost::Name for MsgUpdateBlockRateLimitConfiguration {
+    const NAME: &'static str = "MsgUpdateBlockRateLimitConfiguration";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgUpdateBlockRateLimitConfiguration".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgUpdateBlockRateLimitConfiguration".into()
+    }
+}
 /// MsgUpdateBlockRateLimitConfiguration is a response type for updating the
 /// liquidations config.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateBlockRateLimitConfigurationResponse {}
+impl ::prost::Name for MsgUpdateBlockRateLimitConfigurationResponse {
+    const NAME: &'static str = "MsgUpdateBlockRateLimitConfigurationResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgUpdateBlockRateLimitConfigurationResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgUpdateBlockRateLimitConfigurationResponse".into()
+    }
+}
 /// MsgUpdateLiquidationsConfig is a request type for updating the liquidations
 /// config.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1210,10 +1750,30 @@ pub struct MsgUpdateLiquidationsConfig {
     #[prost(message, optional, tag = "2")]
     pub liquidations_config: ::core::option::Option<LiquidationsConfig>,
 }
+impl ::prost::Name for MsgUpdateLiquidationsConfig {
+    const NAME: &'static str = "MsgUpdateLiquidationsConfig";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgUpdateLiquidationsConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgUpdateLiquidationsConfig".into()
+    }
+}
 /// MsgUpdateLiquidationsConfig is the Msg/LiquidationsConfig response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateLiquidationsConfigResponse {}
+impl ::prost::Name for MsgUpdateLiquidationsConfigResponse {
+    const NAME: &'static str = "MsgUpdateLiquidationsConfigResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MsgUpdateLiquidationsConfigResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MsgUpdateLiquidationsConfigResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
@@ -1585,6 +2145,16 @@ pub mod operation {
         PreexistingStatefulOrder(super::OrderId),
     }
 }
+impl ::prost::Name for Operation {
+    const NAME: &'static str = "Operation";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.Operation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.Operation".into()
+    }
+}
 /// InternalOperation represents an internal operation in the operations to
 /// propose. InternalOperation is used internally within the memclob only.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1612,6 +2182,16 @@ pub mod internal_operation {
         PreexistingStatefulOrder(super::OrderId),
         #[prost(message, tag = "4")]
         OrderRemoval(super::OrderRemoval),
+    }
+}
+impl ::prost::Name for InternalOperation {
+    const NAME: &'static str = "InternalOperation";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.InternalOperation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.InternalOperation".into()
     }
 }
 /// ProcessProposerMatchesEvents is used for communicating which events occurred
@@ -1645,6 +2225,16 @@ pub struct ProcessProposerMatchesEvents {
     #[prost(uint32, tag = "8")]
     pub block_height: u32,
 }
+impl ::prost::Name for ProcessProposerMatchesEvents {
+    const NAME: &'static str = "ProcessProposerMatchesEvents";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.ProcessProposerMatchesEvents".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.ProcessProposerMatchesEvents".into()
+    }
+}
 /// QueryGetClobPairRequest is request type for the ClobPair method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1652,12 +2242,32 @@ pub struct QueryGetClobPairRequest {
     #[prost(uint32, tag = "1")]
     pub id: u32,
 }
+impl ::prost::Name for QueryGetClobPairRequest {
+    const NAME: &'static str = "QueryGetClobPairRequest";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryGetClobPairRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryGetClobPairRequest".into()
+    }
+}
 /// QueryClobPairResponse is response type for the ClobPair method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClobPairResponse {
     #[prost(message, optional, tag = "1")]
     pub clob_pair: ::core::option::Option<ClobPair>,
+}
+impl ::prost::Name for QueryClobPairResponse {
+    const NAME: &'static str = "QueryClobPairResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryClobPairResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryClobPairResponse".into()
+    }
 }
 /// QueryAllClobPairRequest is request type for the ClobPairAll method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1667,6 +2277,16 @@ pub struct QueryAllClobPairRequest {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
+}
+impl ::prost::Name for QueryAllClobPairRequest {
+    const NAME: &'static str = "QueryAllClobPairRequest";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryAllClobPairRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryAllClobPairRequest".into()
+    }
 }
 /// QueryClobPairAllResponse is response type for the ClobPairAll method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1678,6 +2298,16 @@ pub struct QueryClobPairAllResponse {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
+}
+impl ::prost::Name for QueryClobPairAllResponse {
+    const NAME: &'static str = "QueryClobPairAllResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryClobPairAllResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryClobPairAllResponse".into()
+    }
 }
 /// MevNodeToNodeCalculationRequest is a request message used to run the
 /// MEV node <> node calculation.
@@ -1693,6 +2323,16 @@ pub struct MevNodeToNodeCalculationRequest {
     /// Represents the matches and mid-prices on the validator.
     #[prost(message, optional, tag = "2")]
     pub validator_mev_metrics: ::core::option::Option<MevNodeToNodeMetrics>,
+}
+impl ::prost::Name for MevNodeToNodeCalculationRequest {
+    const NAME: &'static str = "MevNodeToNodeCalculationRequest";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MevNodeToNodeCalculationRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MevNodeToNodeCalculationRequest".into()
+    }
 }
 /// MevNodeToNodeCalculationResponse is a response message that contains the
 /// MEV node <> node calculation result.
@@ -1717,12 +2357,44 @@ pub mod mev_node_to_node_calculation_response {
         #[prost(uint64, tag = "3")]
         pub volume: u64,
     }
+    impl ::prost::Name for MevAndVolumePerClob {
+        const NAME: &'static str = "MevAndVolumePerClob";
+        const PACKAGE: &'static str = "dydxprotocol.clob";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.clob.MevNodeToNodeCalculationResponse.MevAndVolumePerClob"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.clob.MevNodeToNodeCalculationResponse.MevAndVolumePerClob"
+                .into()
+        }
+    }
+}
+impl ::prost::Name for MevNodeToNodeCalculationResponse {
+    const NAME: &'static str = "MevNodeToNodeCalculationResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.MevNodeToNodeCalculationResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.MevNodeToNodeCalculationResponse".into()
+    }
 }
 /// QueryEquityTierLimitConfigurationRequest is a request message for
 /// EquityTierLimitConfiguration.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryEquityTierLimitConfigurationRequest {}
+impl ::prost::Name for QueryEquityTierLimitConfigurationRequest {
+    const NAME: &'static str = "QueryEquityTierLimitConfigurationRequest";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryEquityTierLimitConfigurationRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryEquityTierLimitConfigurationRequest".into()
+    }
+}
 /// QueryEquityTierLimitConfigurationResponse is a response message that contains
 /// the EquityTierLimitConfiguration.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1731,11 +2403,31 @@ pub struct QueryEquityTierLimitConfigurationResponse {
     #[prost(message, optional, tag = "1")]
     pub equity_tier_limit_config: ::core::option::Option<EquityTierLimitConfiguration>,
 }
+impl ::prost::Name for QueryEquityTierLimitConfigurationResponse {
+    const NAME: &'static str = "QueryEquityTierLimitConfigurationResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryEquityTierLimitConfigurationResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryEquityTierLimitConfigurationResponse".into()
+    }
+}
 /// QueryBlockRateLimitConfigurationRequest is a request message for
 /// BlockRateLimitConfiguration.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryBlockRateLimitConfigurationRequest {}
+impl ::prost::Name for QueryBlockRateLimitConfigurationRequest {
+    const NAME: &'static str = "QueryBlockRateLimitConfigurationRequest";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryBlockRateLimitConfigurationRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryBlockRateLimitConfigurationRequest".into()
+    }
+}
 /// QueryBlockRateLimitConfigurationResponse is a response message that contains
 /// the BlockRateLimitConfiguration.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1744,6 +2436,16 @@ pub struct QueryBlockRateLimitConfigurationResponse {
     #[prost(message, optional, tag = "1")]
     pub block_rate_limit_config: ::core::option::Option<BlockRateLimitConfiguration>,
 }
+impl ::prost::Name for QueryBlockRateLimitConfigurationResponse {
+    const NAME: &'static str = "QueryBlockRateLimitConfigurationResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryBlockRateLimitConfigurationResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryBlockRateLimitConfigurationResponse".into()
+    }
+}
 /// QueryStatefulOrderRequest is a request message for StatefulOrder.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1751,6 +2453,16 @@ pub struct QueryStatefulOrderRequest {
     /// Order id to query.
     #[prost(message, optional, tag = "1")]
     pub order_id: ::core::option::Option<OrderId>,
+}
+impl ::prost::Name for QueryStatefulOrderRequest {
+    const NAME: &'static str = "QueryStatefulOrderRequest";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryStatefulOrderRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryStatefulOrderRequest".into()
+    }
 }
 /// QueryStatefulOrderResponse is a response message that contains the stateful
 /// order.
@@ -1767,11 +2479,31 @@ pub struct QueryStatefulOrderResponse {
     #[prost(bool, tag = "3")]
     pub triggered: bool,
 }
+impl ::prost::Name for QueryStatefulOrderResponse {
+    const NAME: &'static str = "QueryStatefulOrderResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryStatefulOrderResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryStatefulOrderResponse".into()
+    }
+}
 /// QueryLiquidationsConfigurationRequest is a request message for
 /// LiquidationsConfiguration.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryLiquidationsConfigurationRequest {}
+impl ::prost::Name for QueryLiquidationsConfigurationRequest {
+    const NAME: &'static str = "QueryLiquidationsConfigurationRequest";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryLiquidationsConfigurationRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryLiquidationsConfigurationRequest".into()
+    }
+}
 /// QueryLiquidationsConfigurationResponse is a response message that contains
 /// the LiquidationsConfiguration.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1779,6 +2511,16 @@ pub struct QueryLiquidationsConfigurationRequest {}
 pub struct QueryLiquidationsConfigurationResponse {
     #[prost(message, optional, tag = "1")]
     pub liquidations_config: ::core::option::Option<LiquidationsConfig>,
+}
+impl ::prost::Name for QueryLiquidationsConfigurationResponse {
+    const NAME: &'static str = "QueryLiquidationsConfigurationResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.QueryLiquidationsConfigurationResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.QueryLiquidationsConfigurationResponse".into()
+    }
 }
 /// StreamOrderbookUpdatesRequest is a request message for the
 /// StreamOrderbookUpdates method.
@@ -1788,6 +2530,16 @@ pub struct StreamOrderbookUpdatesRequest {
     /// Clob pair ids to stream orderbook updates for.
     #[prost(uint32, repeated, tag = "1")]
     pub clob_pair_id: ::prost::alloc::vec::Vec<u32>,
+}
+impl ::prost::Name for StreamOrderbookUpdatesRequest {
+    const NAME: &'static str = "StreamOrderbookUpdatesRequest";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.StreamOrderbookUpdatesRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.StreamOrderbookUpdatesRequest".into()
+    }
 }
 /// StreamOrderbookUpdatesResponse is a response message for the
 /// StreamOrderbookUpdates method.
@@ -1804,6 +2556,16 @@ pub struct StreamOrderbookUpdatesResponse {
     /// Exec mode of the updates.
     #[prost(uint32, tag = "3")]
     pub exec_mode: u32,
+}
+impl ::prost::Name for StreamOrderbookUpdatesResponse {
+    const NAME: &'static str = "StreamOrderbookUpdatesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.StreamOrderbookUpdatesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.StreamOrderbookUpdatesResponse".into()
+    }
 }
 /// StreamUpdate is an update that will be pushed through the
 /// GRPC stream.
@@ -1828,6 +2590,16 @@ pub mod stream_update {
         OrderFill(super::StreamOrderbookFill),
     }
 }
+impl ::prost::Name for StreamUpdate {
+    const NAME: &'static str = "StreamUpdate";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.StreamUpdate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.StreamUpdate".into()
+    }
+}
 /// StreamOrderbookUpdate provides information on an orderbook update. Used in
 /// the full node GRPC stream.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1846,6 +2618,16 @@ pub struct StreamOrderbookUpdate {
     #[prost(bool, tag = "2")]
     pub snapshot: bool,
 }
+impl ::prost::Name for StreamOrderbookUpdate {
+    const NAME: &'static str = "StreamOrderbookUpdate";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.StreamOrderbookUpdate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.StreamOrderbookUpdate".into()
+    }
+}
 /// StreamOrderbookFill provides information on an orderbook fill. Used in
 /// the full node GRPC stream.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -1862,6 +2644,16 @@ pub struct StreamOrderbookFill {
     /// Resulting fill amounts for each order in the orders array.
     #[prost(uint64, repeated, packed = "false", tag = "3")]
     pub fill_amounts: ::prost::alloc::vec::Vec<u64>,
+}
+impl ::prost::Name for StreamOrderbookFill {
+    const NAME: &'static str = "StreamOrderbookFill";
+    const PACKAGE: &'static str = "dydxprotocol.clob";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.clob.StreamOrderbookFill".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.clob.StreamOrderbookFill".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {

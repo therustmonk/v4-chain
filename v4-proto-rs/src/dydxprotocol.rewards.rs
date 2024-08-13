@@ -23,6 +23,16 @@ pub struct Params {
     #[prost(uint32, tag = "5")]
     pub fee_multiplier_ppm: u32,
 }
+impl ::prost::Name for Params {
+    const NAME: &'static str = "Params";
+    const PACKAGE: &'static str = "dydxprotocol.rewards";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.rewards.Params".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.rewards.Params".into()
+    }
+}
 /// GenesisState defines the rewards module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -31,16 +41,46 @@ pub struct GenesisState {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<Params>,
 }
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.rewards";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.rewards.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.rewards.GenesisState".into()
+    }
+}
 /// QueryParamsRequest is a request type for the Params RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryParamsRequest {}
+impl ::prost::Name for QueryParamsRequest {
+    const NAME: &'static str = "QueryParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.rewards";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.rewards.QueryParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.rewards.QueryParamsRequest".into()
+    }
+}
 /// QueryParamsResponse is a response type for the Params RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryParamsResponse {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<Params>,
+}
+impl ::prost::Name for QueryParamsResponse {
+    const NAME: &'static str = "QueryParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.rewards";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.rewards.QueryParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.rewards.QueryParamsResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -166,6 +206,16 @@ pub struct RewardShare {
     #[prost(bytes = "vec", tag = "2")]
     pub weight: ::prost::alloc::vec::Vec<u8>,
 }
+impl ::prost::Name for RewardShare {
+    const NAME: &'static str = "RewardShare";
+    const PACKAGE: &'static str = "dydxprotocol.rewards";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.rewards.RewardShare".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.rewards.RewardShare".into()
+    }
+}
 /// MsgUpdateParams is the Msg/UpdateParams request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -176,10 +226,30 @@ pub struct MsgUpdateParams {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<Params>,
 }
+impl ::prost::Name for MsgUpdateParams {
+    const NAME: &'static str = "MsgUpdateParams";
+    const PACKAGE: &'static str = "dydxprotocol.rewards";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.rewards.MsgUpdateParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.rewards.MsgUpdateParams".into()
+    }
+}
 /// MsgUpdateParamsResponse is the Msg/UpdateParams response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateParamsResponse {}
+impl ::prost::Name for MsgUpdateParamsResponse {
+    const NAME: &'static str = "MsgUpdateParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.rewards";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.rewards.MsgUpdateParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.rewards.MsgUpdateParamsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

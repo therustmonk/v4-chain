@@ -6,10 +6,30 @@ pub struct UpdateMarketPricesRequest {
     #[prost(message, repeated, tag = "1")]
     pub market_price_updates: ::prost::alloc::vec::Vec<MarketPriceUpdate>,
 }
+impl ::prost::Name for UpdateMarketPricesRequest {
+    const NAME: &'static str = "UpdateMarketPricesRequest";
+    const PACKAGE: &'static str = "dydxprotocol.daemons.pricefeed";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.daemons.pricefeed.UpdateMarketPricesRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.daemons.pricefeed.UpdateMarketPricesRequest".into()
+    }
+}
 /// UpdateMarketPricesResponse is a response message for updating market prices.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateMarketPricesResponse {}
+impl ::prost::Name for UpdateMarketPricesResponse {
+    const NAME: &'static str = "UpdateMarketPricesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.daemons.pricefeed";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.daemons.pricefeed.UpdateMarketPricesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.daemons.pricefeed.UpdateMarketPricesResponse".into()
+    }
+}
 /// ExchangePrice represents a specific exchange's market price
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -21,6 +41,16 @@ pub struct ExchangePrice {
     #[prost(message, optional, tag = "3")]
     pub last_update_time: ::core::option::Option<::prost_types::Timestamp>,
 }
+impl ::prost::Name for ExchangePrice {
+    const NAME: &'static str = "ExchangePrice";
+    const PACKAGE: &'static str = "dydxprotocol.daemons.pricefeed";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.daemons.pricefeed.ExchangePrice".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.daemons.pricefeed.ExchangePrice".into()
+    }
+}
 /// MarketPriceUpdate represents an update to a single market
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -29,6 +59,16 @@ pub struct MarketPriceUpdate {
     pub market_id: u32,
     #[prost(message, repeated, tag = "2")]
     pub exchange_prices: ::prost::alloc::vec::Vec<ExchangePrice>,
+}
+impl ::prost::Name for MarketPriceUpdate {
+    const NAME: &'static str = "MarketPriceUpdate";
+    const PACKAGE: &'static str = "dydxprotocol.daemons.pricefeed";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.daemons.pricefeed.MarketPriceUpdate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.daemons.pricefeed.MarketPriceUpdate".into()
+    }
 }
 /// Generated client implementations.
 pub mod price_feed_service_client {

@@ -31,6 +31,16 @@ pub struct MarketParam {
     #[prost(string, tag = "6")]
     pub exchange_config_json: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MarketParam {
+    const NAME: &'static str = "MarketParam";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.MarketParam".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.MarketParam".into()
+    }
+}
 /// MarketPrice is used by the application to store/retrieve oracle price.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -47,6 +57,16 @@ pub struct MarketPrice {
     #[prost(uint64, tag = "3")]
     pub price: u64,
 }
+impl ::prost::Name for MarketPrice {
+    const NAME: &'static str = "MarketPrice";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.MarketPrice".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.MarketPrice".into()
+    }
+}
 /// GenesisState defines the prices module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -56,6 +76,16 @@ pub struct GenesisState {
     #[prost(message, repeated, tag = "2")]
     pub market_prices: ::prost::alloc::vec::Vec<MarketPrice>,
 }
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.GenesisState".into()
+    }
+}
 /// QueryMarketPriceRequest is request type for the Query/Params `MarketPrice`
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -64,6 +94,16 @@ pub struct QueryMarketPriceRequest {
     #[prost(uint32, tag = "1")]
     pub id: u32,
 }
+impl ::prost::Name for QueryMarketPriceRequest {
+    const NAME: &'static str = "QueryMarketPriceRequest";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.QueryMarketPriceRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.QueryMarketPriceRequest".into()
+    }
+}
 /// QueryMarketPriceResponse is response type for the Query/Params `MarketPrice`
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -71,6 +111,16 @@ pub struct QueryMarketPriceRequest {
 pub struct QueryMarketPriceResponse {
     #[prost(message, optional, tag = "1")]
     pub market_price: ::core::option::Option<MarketPrice>,
+}
+impl ::prost::Name for QueryMarketPriceResponse {
+    const NAME: &'static str = "QueryMarketPriceResponse";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.QueryMarketPriceResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.QueryMarketPriceResponse".into()
+    }
 }
 /// QueryAllMarketPricesRequest is request type for the Query/Params
 /// `AllMarketPrices` RPC method.
@@ -81,6 +131,16 @@ pub struct QueryAllMarketPricesRequest {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
+}
+impl ::prost::Name for QueryAllMarketPricesRequest {
+    const NAME: &'static str = "QueryAllMarketPricesRequest";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.QueryAllMarketPricesRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.QueryAllMarketPricesRequest".into()
+    }
 }
 /// QueryAllMarketPricesResponse is response type for the Query/Params
 /// `AllMarketPrices` RPC method.
@@ -94,6 +154,16 @@ pub struct QueryAllMarketPricesResponse {
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
 }
+impl ::prost::Name for QueryAllMarketPricesResponse {
+    const NAME: &'static str = "QueryAllMarketPricesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.QueryAllMarketPricesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.QueryAllMarketPricesResponse".into()
+    }
+}
 /// QueryMarketParamsRequest is request type for the Query/Params `MarketParams`
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -102,6 +172,16 @@ pub struct QueryMarketParamRequest {
     #[prost(uint32, tag = "1")]
     pub id: u32,
 }
+impl ::prost::Name for QueryMarketParamRequest {
+    const NAME: &'static str = "QueryMarketParamRequest";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.QueryMarketParamRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.QueryMarketParamRequest".into()
+    }
+}
 /// QueryMarketParamResponse is response type for the Query/Params `MarketParams`
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -109,6 +189,16 @@ pub struct QueryMarketParamRequest {
 pub struct QueryMarketParamResponse {
     #[prost(message, optional, tag = "1")]
     pub market_param: ::core::option::Option<MarketParam>,
+}
+impl ::prost::Name for QueryMarketParamResponse {
+    const NAME: &'static str = "QueryMarketParamResponse";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.QueryMarketParamResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.QueryMarketParamResponse".into()
+    }
 }
 /// QueryAllMarketParamsRequest is request type for the Query/Params
 /// `AllMarketParams` RPC method.
@@ -119,6 +209,16 @@ pub struct QueryAllMarketParamsRequest {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
+}
+impl ::prost::Name for QueryAllMarketParamsRequest {
+    const NAME: &'static str = "QueryAllMarketParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.QueryAllMarketParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.QueryAllMarketParamsRequest".into()
+    }
 }
 /// QueryAllMarketParamsResponse is response type for the Query/Params
 /// `AllMarketParams` RPC method.
@@ -131,6 +231,16 @@ pub struct QueryAllMarketParamsResponse {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
+}
+impl ::prost::Name for QueryAllMarketParamsResponse {
+    const NAME: &'static str = "QueryAllMarketParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.QueryAllMarketParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.QueryAllMarketParamsResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -336,10 +446,30 @@ pub struct MsgCreateOracleMarket {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<MarketParam>,
 }
+impl ::prost::Name for MsgCreateOracleMarket {
+    const NAME: &'static str = "MsgCreateOracleMarket";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.MsgCreateOracleMarket".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.MsgCreateOracleMarket".into()
+    }
+}
 /// MsgCreateOracleMarketResponse defines the CreateOracleMarket response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgCreateOracleMarketResponse {}
+impl ::prost::Name for MsgCreateOracleMarketResponse {
+    const NAME: &'static str = "MsgCreateOracleMarketResponse";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.MsgCreateOracleMarketResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.MsgCreateOracleMarketResponse".into()
+    }
+}
 /// MsgUpdateMarketPrices is a request type for the UpdateMarketPrices method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -362,12 +492,42 @@ pub mod msg_update_market_prices {
         #[prost(uint64, tag = "2")]
         pub price: u64,
     }
+    impl ::prost::Name for MarketPrice {
+        const NAME: &'static str = "MarketPrice";
+        const PACKAGE: &'static str = "dydxprotocol.prices";
+        fn full_name() -> ::prost::alloc::string::String {
+            "dydxprotocol.prices.MsgUpdateMarketPrices.MarketPrice".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/dydxprotocol.prices.MsgUpdateMarketPrices.MarketPrice".into()
+        }
+    }
+}
+impl ::prost::Name for MsgUpdateMarketPrices {
+    const NAME: &'static str = "MsgUpdateMarketPrices";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.MsgUpdateMarketPrices".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.MsgUpdateMarketPrices".into()
+    }
 }
 /// MsgUpdateMarketPricesResponse defines the MsgUpdateMarketPrices response
 /// type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateMarketPricesResponse {}
+impl ::prost::Name for MsgUpdateMarketPricesResponse {
+    const NAME: &'static str = "MsgUpdateMarketPricesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.MsgUpdateMarketPricesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.MsgUpdateMarketPricesResponse".into()
+    }
+}
 /// MsgUpdateMarketParam is a message used by x/gov for updating the parameters
 /// of an oracle market.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -379,10 +539,30 @@ pub struct MsgUpdateMarketParam {
     #[prost(message, optional, tag = "2")]
     pub market_param: ::core::option::Option<MarketParam>,
 }
+impl ::prost::Name for MsgUpdateMarketParam {
+    const NAME: &'static str = "MsgUpdateMarketParam";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.MsgUpdateMarketParam".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.MsgUpdateMarketParam".into()
+    }
+}
 /// MsgUpdateMarketParamResponse defines the UpdateMarketParam response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateMarketParamResponse {}
+impl ::prost::Name for MsgUpdateMarketParamResponse {
+    const NAME: &'static str = "MsgUpdateMarketParamResponse";
+    const PACKAGE: &'static str = "dydxprotocol.prices";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.prices.MsgUpdateMarketParamResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.prices.MsgUpdateMarketParamResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

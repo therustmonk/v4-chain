@@ -7,10 +7,30 @@ pub struct AddBridgeEventsRequest {
     #[prost(message, repeated, tag = "1")]
     pub bridge_events: ::prost::alloc::vec::Vec<super::super::bridge::BridgeEvent>,
 }
+impl ::prost::Name for AddBridgeEventsRequest {
+    const NAME: &'static str = "AddBridgeEventsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.daemons.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.daemons.bridge.AddBridgeEventsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.daemons.bridge.AddBridgeEventsRequest".into()
+    }
+}
 /// AddBridgeEventsResponse is a response message for BridgeEventRequest.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddBridgeEventsResponse {}
+impl ::prost::Name for AddBridgeEventsResponse {
+    const NAME: &'static str = "AddBridgeEventsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.daemons.bridge";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.daemons.bridge.AddBridgeEventsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.daemons.bridge.AddBridgeEventsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod bridge_service_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

@@ -16,6 +16,16 @@ pub struct AssetPosition {
     #[prost(uint64, tag = "3")]
     pub index: u64,
 }
+impl ::prost::Name for AssetPosition {
+    const NAME: &'static str = "AssetPosition";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.AssetPosition".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.AssetPosition".into()
+    }
+}
 /// PerpetualPositions are an account’s positions of a `Perpetual`.
 /// Therefore they hold any information needed to trade perpetuals.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -32,6 +42,16 @@ pub struct PerpetualPosition {
     #[prost(bytes = "vec", tag = "3")]
     pub funding_index: ::prost::alloc::vec::Vec<u8>,
 }
+impl ::prost::Name for PerpetualPosition {
+    const NAME: &'static str = "PerpetualPosition";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.PerpetualPosition".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.PerpetualPosition".into()
+    }
+}
 /// SubaccountId defines a unique identifier for a Subaccount.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -43,6 +63,16 @@ pub struct SubaccountId {
     /// Currently limited to 128*1000 subaccounts per owner.
     #[prost(uint32, tag = "2")]
     pub number: u32,
+}
+impl ::prost::Name for SubaccountId {
+    const NAME: &'static str = "SubaccountId";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.SubaccountId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.SubaccountId".into()
+    }
 }
 /// Subaccount defines a single sub-account for a given address.
 /// Subaccounts are uniquely indexed by a subaccountNumber/owner pair.
@@ -65,12 +95,32 @@ pub struct Subaccount {
     #[prost(bool, tag = "4")]
     pub margin_enabled: bool,
 }
+impl ::prost::Name for Subaccount {
+    const NAME: &'static str = "Subaccount";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.Subaccount".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.Subaccount".into()
+    }
+}
 /// GenesisState defines the subaccounts module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenesisState {
     #[prost(message, repeated, tag = "1")]
     pub subaccounts: ::prost::alloc::vec::Vec<Subaccount>,
+}
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.GenesisState".into()
+    }
 }
 /// QueryGetSubaccountRequest is request type for the Query RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -81,12 +131,32 @@ pub struct QueryGetSubaccountRequest {
     #[prost(uint32, tag = "2")]
     pub number: u32,
 }
+impl ::prost::Name for QueryGetSubaccountRequest {
+    const NAME: &'static str = "QueryGetSubaccountRequest";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.QueryGetSubaccountRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.QueryGetSubaccountRequest".into()
+    }
+}
 /// QuerySubaccountResponse is response type for the Query RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuerySubaccountResponse {
     #[prost(message, optional, tag = "1")]
     pub subaccount: ::core::option::Option<Subaccount>,
+}
+impl ::prost::Name for QuerySubaccountResponse {
+    const NAME: &'static str = "QuerySubaccountResponse";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.QuerySubaccountResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.QuerySubaccountResponse".into()
+    }
 }
 /// QueryAllSubaccountRequest is request type for the Query RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -96,6 +166,16 @@ pub struct QueryAllSubaccountRequest {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
+}
+impl ::prost::Name for QueryAllSubaccountRequest {
+    const NAME: &'static str = "QueryAllSubaccountRequest";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.QueryAllSubaccountRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.QueryAllSubaccountRequest".into()
+    }
 }
 /// QuerySubaccountAllResponse is response type for the Query RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -108,6 +188,16 @@ pub struct QuerySubaccountAllResponse {
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
 }
+impl ::prost::Name for QuerySubaccountAllResponse {
+    const NAME: &'static str = "QuerySubaccountAllResponse";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.QuerySubaccountAllResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.QuerySubaccountAllResponse".into()
+    }
+}
 /// QueryGetWithdrawalAndTransfersBlockedInfoRequest is a request type for
 /// fetching information about whether withdrawals and transfers are blocked for
 /// a collateral pool associated with the passed in perpetual id.
@@ -116,6 +206,18 @@ pub struct QuerySubaccountAllResponse {
 pub struct QueryGetWithdrawalAndTransfersBlockedInfoRequest {
     #[prost(uint32, tag = "1")]
     pub perpetual_id: u32,
+}
+impl ::prost::Name for QueryGetWithdrawalAndTransfersBlockedInfoRequest {
+    const NAME: &'static str = "QueryGetWithdrawalAndTransfersBlockedInfoRequest";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.QueryGetWithdrawalAndTransfersBlockedInfoRequest"
+            .into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.QueryGetWithdrawalAndTransfersBlockedInfoRequest"
+            .into()
+    }
 }
 /// QueryGetWithdrawalAndTransfersBlockedInfoRequest is a response type for
 /// fetching information about whether withdrawals and transfers are blocked.
@@ -129,6 +231,18 @@ pub struct QueryGetWithdrawalAndTransfersBlockedInfoResponse {
     #[prost(uint32, tag = "3")]
     pub withdrawals_and_transfers_unblocked_at_block: u32,
 }
+impl ::prost::Name for QueryGetWithdrawalAndTransfersBlockedInfoResponse {
+    const NAME: &'static str = "QueryGetWithdrawalAndTransfersBlockedInfoResponse";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.QueryGetWithdrawalAndTransfersBlockedInfoResponse"
+            .into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.QueryGetWithdrawalAndTransfersBlockedInfoResponse"
+            .into()
+    }
+}
 /// QueryCollateralPoolAddressRequest is the request type for fetching the
 /// account address of the collateral pool associated with the passed in
 /// perpetual id.
@@ -138,6 +252,16 @@ pub struct QueryCollateralPoolAddressRequest {
     #[prost(uint32, tag = "1")]
     pub perpetual_id: u32,
 }
+impl ::prost::Name for QueryCollateralPoolAddressRequest {
+    const NAME: &'static str = "QueryCollateralPoolAddressRequest";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.QueryCollateralPoolAddressRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.QueryCollateralPoolAddressRequest".into()
+    }
+}
 /// QueryCollateralPoolAddressResponse is a response type for fetching the
 /// account address of the collateral pool associated with the passed in
 /// perpetual id.
@@ -146,6 +270,16 @@ pub struct QueryCollateralPoolAddressRequest {
 pub struct QueryCollateralPoolAddressResponse {
     #[prost(string, tag = "1")]
     pub collateral_pool_address: ::prost::alloc::string::String,
+}
+impl ::prost::Name for QueryCollateralPoolAddressResponse {
+    const NAME: &'static str = "QueryCollateralPoolAddressResponse";
+    const PACKAGE: &'static str = "dydxprotocol.subaccounts";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.subaccounts.QueryCollateralPoolAddressResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.subaccounts.QueryCollateralPoolAddressResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {

@@ -14,6 +14,16 @@ pub struct Perpetual {
     #[prost(bytes = "vec", tag = "3")]
     pub open_interest: ::prost::alloc::vec::Vec<u8>,
 }
+impl ::prost::Name for Perpetual {
+    const NAME: &'static str = "Perpetual";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.Perpetual".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.Perpetual".into()
+    }
+}
 /// PerpetualParams represents the parameters of a perpetual on the dYdX
 /// exchange.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -47,6 +57,16 @@ pub struct PerpetualParams {
     #[prost(enumeration = "PerpetualMarketType", tag = "7")]
     pub market_type: i32,
 }
+impl ::prost::Name for PerpetualParams {
+    const NAME: &'static str = "PerpetualParams";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.PerpetualParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.PerpetualParams".into()
+    }
+}
 /// MarketPremiums stores a list of premiums for a single perpetual market.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -59,6 +79,16 @@ pub struct MarketPremiums {
     /// are stored in this list.
     #[prost(sint32, repeated, tag = "2")]
     pub premiums: ::prost::alloc::vec::Vec<i32>,
+}
+impl ::prost::Name for MarketPremiums {
+    const NAME: &'static str = "MarketPremiums";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MarketPremiums".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MarketPremiums".into()
+    }
 }
 /// PremiumStore is a struct to store a perpetual premiums for all
 /// perpetual markets. It stores a list of `MarketPremiums`, each of which
@@ -81,6 +111,16 @@ pub struct PremiumStore {
     /// was added.
     #[prost(uint32, tag = "2")]
     pub num_premiums: u32,
+}
+impl ::prost::Name for PremiumStore {
+    const NAME: &'static str = "PremiumStore";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.PremiumStore".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.PremiumStore".into()
+    }
 }
 /// LiquidityTier stores margin information.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -126,6 +166,16 @@ pub struct LiquidityTier {
     /// If zero, then the IMF does not scale with OI.
     #[prost(uint64, tag = "8")]
     pub open_interest_upper_cap: u64,
+}
+impl ::prost::Name for LiquidityTier {
+    const NAME: &'static str = "LiquidityTier";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.LiquidityTier".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.LiquidityTier".into()
+    }
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
@@ -178,6 +228,16 @@ pub struct Params {
     #[prost(uint32, tag = "3")]
     pub min_num_votes_per_sample: u32,
 }
+impl ::prost::Name for Params {
+    const NAME: &'static str = "Params";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.Params".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.Params".into()
+    }
+}
 /// GenesisState defines the perpetuals module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -189,6 +249,16 @@ pub struct GenesisState {
     #[prost(message, optional, tag = "3")]
     pub params: ::core::option::Option<Params>,
 }
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.GenesisState".into()
+    }
+}
 /// Queries a Perpetual by id.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -196,12 +266,32 @@ pub struct QueryPerpetualRequest {
     #[prost(uint32, tag = "1")]
     pub id: u32,
 }
+impl ::prost::Name for QueryPerpetualRequest {
+    const NAME: &'static str = "QueryPerpetualRequest";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryPerpetualRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryPerpetualRequest".into()
+    }
+}
 /// QueryPerpetualResponse is response type for the Perpetual RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryPerpetualResponse {
     #[prost(message, optional, tag = "1")]
     pub perpetual: ::core::option::Option<Perpetual>,
+}
+impl ::prost::Name for QueryPerpetualResponse {
+    const NAME: &'static str = "QueryPerpetualResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryPerpetualResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryPerpetualResponse".into()
+    }
 }
 /// Queries a list of Perpetual items.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -211,6 +301,16 @@ pub struct QueryAllPerpetualsRequest {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
+}
+impl ::prost::Name for QueryAllPerpetualsRequest {
+    const NAME: &'static str = "QueryAllPerpetualsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryAllPerpetualsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryAllPerpetualsRequest".into()
+    }
 }
 /// QueryAllPerpetualsResponse is response type for the AllPerpetuals RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -223,6 +323,16 @@ pub struct QueryAllPerpetualsResponse {
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
 }
+impl ::prost::Name for QueryAllPerpetualsResponse {
+    const NAME: &'static str = "QueryAllPerpetualsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryAllPerpetualsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryAllPerpetualsResponse".into()
+    }
+}
 /// Queries a list of LiquidityTier items.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -231,6 +341,16 @@ pub struct QueryAllLiquidityTiersRequest {
     pub pagination: ::core::option::Option<
         super::super::cosmos::base::query::v1beta1::PageRequest,
     >,
+}
+impl ::prost::Name for QueryAllLiquidityTiersRequest {
+    const NAME: &'static str = "QueryAllLiquidityTiersRequest";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryAllLiquidityTiersRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryAllLiquidityTiersRequest".into()
+    }
 }
 /// QueryAllLiquidityTiersResponse is response type for the AllLiquidityTiers RPC
 /// method.
@@ -244,10 +364,30 @@ pub struct QueryAllLiquidityTiersResponse {
         super::super::cosmos::base::query::v1beta1::PageResponse,
     >,
 }
+impl ::prost::Name for QueryAllLiquidityTiersResponse {
+    const NAME: &'static str = "QueryAllLiquidityTiersResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryAllLiquidityTiersResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryAllLiquidityTiersResponse".into()
+    }
+}
 /// QueryPremiumVotesRequest is the request type for the PremiumVotes RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryPremiumVotesRequest {}
+impl ::prost::Name for QueryPremiumVotesRequest {
+    const NAME: &'static str = "QueryPremiumVotesRequest";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryPremiumVotesRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryPremiumVotesRequest".into()
+    }
+}
 /// QueryPremiumVotesResponse is the response type for the PremiumVotes RPC
 /// method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -256,11 +396,31 @@ pub struct QueryPremiumVotesResponse {
     #[prost(message, optional, tag = "1")]
     pub premium_votes: ::core::option::Option<PremiumStore>,
 }
+impl ::prost::Name for QueryPremiumVotesResponse {
+    const NAME: &'static str = "QueryPremiumVotesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryPremiumVotesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryPremiumVotesResponse".into()
+    }
+}
 /// QueryPremiumSamplesRequest is the request type for the PremiumSamples RPC
 /// method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryPremiumSamplesRequest {}
+impl ::prost::Name for QueryPremiumSamplesRequest {
+    const NAME: &'static str = "QueryPremiumSamplesRequest";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryPremiumSamplesRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryPremiumSamplesRequest".into()
+    }
+}
 /// QueryPremiumSamplesResponse is the response type for the PremiumSamples RPC
 /// method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -269,16 +429,46 @@ pub struct QueryPremiumSamplesResponse {
     #[prost(message, optional, tag = "1")]
     pub premium_samples: ::core::option::Option<PremiumStore>,
 }
+impl ::prost::Name for QueryPremiumSamplesResponse {
+    const NAME: &'static str = "QueryPremiumSamplesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryPremiumSamplesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryPremiumSamplesResponse".into()
+    }
+}
 /// QueryParamsResponse is the response type for the Params RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryParamsRequest {}
+impl ::prost::Name for QueryParamsRequest {
+    const NAME: &'static str = "QueryParamsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryParamsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryParamsRequest".into()
+    }
+}
 /// QueryParamsResponse is the response type for the Params RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryParamsResponse {
     #[prost(message, optional, tag = "1")]
     pub params: ::core::option::Option<Params>,
+}
+impl ::prost::Name for QueryParamsResponse {
+    const NAME: &'static str = "QueryParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.QueryParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.QueryParamsResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -543,11 +733,31 @@ pub struct MsgCreatePerpetual {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<PerpetualParams>,
 }
+impl ::prost::Name for MsgCreatePerpetual {
+    const NAME: &'static str = "MsgCreatePerpetual";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgCreatePerpetual".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgCreatePerpetual".into()
+    }
+}
 /// MsgCreatePerpetualResponse defines the CreatePerpetual
 /// response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgCreatePerpetualResponse {}
+impl ::prost::Name for MsgCreatePerpetualResponse {
+    const NAME: &'static str = "MsgCreatePerpetualResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgCreatePerpetualResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgCreatePerpetualResponse".into()
+    }
+}
 /// MsgSetLiquidityTier is a message used by x/gov to create or update a
 /// liquidity tier.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -560,10 +770,30 @@ pub struct MsgSetLiquidityTier {
     #[prost(message, optional, tag = "2")]
     pub liquidity_tier: ::core::option::Option<LiquidityTier>,
 }
+impl ::prost::Name for MsgSetLiquidityTier {
+    const NAME: &'static str = "MsgSetLiquidityTier";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgSetLiquidityTier".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgSetLiquidityTier".into()
+    }
+}
 /// MsgSetLiquidityTierResponse defines the SetLiquidityTier response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgSetLiquidityTierResponse {}
+impl ::prost::Name for MsgSetLiquidityTierResponse {
+    const NAME: &'static str = "MsgSetLiquidityTierResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgSetLiquidityTierResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgSetLiquidityTierResponse".into()
+    }
+}
 /// MsgUpdatePerpetualParams is a message used by x/gov to update the parameters
 /// of a perpetual.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -575,11 +805,31 @@ pub struct MsgUpdatePerpetualParams {
     #[prost(message, optional, tag = "2")]
     pub perpetual_params: ::core::option::Option<PerpetualParams>,
 }
+impl ::prost::Name for MsgUpdatePerpetualParams {
+    const NAME: &'static str = "MsgUpdatePerpetualParams";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgUpdatePerpetualParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgUpdatePerpetualParams".into()
+    }
+}
 /// MsgUpdatePerpetualParamsResponse defines the UpdatePerpetualParams
 /// response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdatePerpetualParamsResponse {}
+impl ::prost::Name for MsgUpdatePerpetualParamsResponse {
+    const NAME: &'static str = "MsgUpdatePerpetualParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgUpdatePerpetualParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgUpdatePerpetualParamsResponse".into()
+    }
+}
 /// FundingPremium represents a funding premium value for a perpetual
 /// market. Can be used to represent a premium vote or a premium sample.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -592,6 +842,16 @@ pub struct FundingPremium {
     #[prost(int32, tag = "2")]
     pub premium_ppm: i32,
 }
+impl ::prost::Name for FundingPremium {
+    const NAME: &'static str = "FundingPremium";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.FundingPremium".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.FundingPremium".into()
+    }
+}
 /// MsgAddPremiumVotes is a request type for the AddPremiumVotes method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -599,11 +859,31 @@ pub struct MsgAddPremiumVotes {
     #[prost(message, repeated, tag = "1")]
     pub votes: ::prost::alloc::vec::Vec<FundingPremium>,
 }
+impl ::prost::Name for MsgAddPremiumVotes {
+    const NAME: &'static str = "MsgAddPremiumVotes";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgAddPremiumVotes".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgAddPremiumVotes".into()
+    }
+}
 /// MsgAddPremiumVotesResponse defines the AddPremiumVotes
 /// response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgAddPremiumVotesResponse {}
+impl ::prost::Name for MsgAddPremiumVotesResponse {
+    const NAME: &'static str = "MsgAddPremiumVotesResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgAddPremiumVotesResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgAddPremiumVotesResponse".into()
+    }
+}
 /// MsgUpdateParams is a message used by x/gov to update the parameters of the
 /// perpetuals module.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -615,10 +895,30 @@ pub struct MsgUpdateParams {
     #[prost(message, optional, tag = "2")]
     pub params: ::core::option::Option<Params>,
 }
+impl ::prost::Name for MsgUpdateParams {
+    const NAME: &'static str = "MsgUpdateParams";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgUpdateParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgUpdateParams".into()
+    }
+}
 /// MsgUpdateParamsResponse defines the UpdateParams response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgUpdateParamsResponse {}
+impl ::prost::Name for MsgUpdateParamsResponse {
+    const NAME: &'static str = "MsgUpdateParamsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.perpetuals";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.perpetuals.MsgUpdateParamsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.perpetuals.MsgUpdateParamsResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

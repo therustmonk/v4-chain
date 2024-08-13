@@ -22,6 +22,16 @@ pub struct VestEntry {
     #[prost(message, optional, tag = "5")]
     pub end_time: ::core::option::Option<::prost_types::Timestamp>,
 }
+impl ::prost::Name for VestEntry {
+    const NAME: &'static str = "VestEntry";
+    const PACKAGE: &'static str = "dydxprotocol.vest";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vest.VestEntry".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vest.VestEntry".into()
+    }
+}
 /// GenesisState defines the vest module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -30,6 +40,16 @@ pub struct GenesisState {
     #[prost(message, repeated, tag = "1")]
     pub vest_entries: ::prost::alloc::vec::Vec<VestEntry>,
 }
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.vest";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vest.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vest.GenesisState".into()
+    }
+}
 /// QueryVestEntryRequest is a request type for the VestEntry RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -37,12 +57,32 @@ pub struct QueryVestEntryRequest {
     #[prost(string, tag = "1")]
     pub vester_account: ::prost::alloc::string::String,
 }
+impl ::prost::Name for QueryVestEntryRequest {
+    const NAME: &'static str = "QueryVestEntryRequest";
+    const PACKAGE: &'static str = "dydxprotocol.vest";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vest.QueryVestEntryRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vest.QueryVestEntryRequest".into()
+    }
+}
 /// QueryVestEntryResponse is a response type for the VestEntry RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryVestEntryResponse {
     #[prost(message, optional, tag = "1")]
     pub entry: ::core::option::Option<VestEntry>,
+}
+impl ::prost::Name for QueryVestEntryResponse {
+    const NAME: &'static str = "QueryVestEntryResponse";
+    const PACKAGE: &'static str = "dydxprotocol.vest";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vest.QueryVestEntryResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vest.QueryVestEntryResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -169,10 +209,30 @@ pub struct MsgDeleteVestEntry {
     #[prost(string, tag = "2")]
     pub vester_account: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MsgDeleteVestEntry {
+    const NAME: &'static str = "MsgDeleteVestEntry";
+    const PACKAGE: &'static str = "dydxprotocol.vest";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vest.MsgDeleteVestEntry".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vest.MsgDeleteVestEntry".into()
+    }
+}
 /// MsgDeleteVestEntryResponse is the Msg/DeleteVestEntry response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgDeleteVestEntryResponse {}
+impl ::prost::Name for MsgDeleteVestEntryResponse {
+    const NAME: &'static str = "MsgDeleteVestEntryResponse";
+    const PACKAGE: &'static str = "dydxprotocol.vest";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vest.MsgDeleteVestEntryResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vest.MsgDeleteVestEntryResponse".into()
+    }
+}
 /// MsgSetVestEntry is the Msg/SetVestEntry request type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -184,10 +244,30 @@ pub struct MsgSetVestEntry {
     #[prost(message, optional, tag = "2")]
     pub entry: ::core::option::Option<VestEntry>,
 }
+impl ::prost::Name for MsgSetVestEntry {
+    const NAME: &'static str = "MsgSetVestEntry";
+    const PACKAGE: &'static str = "dydxprotocol.vest";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vest.MsgSetVestEntry".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vest.MsgSetVestEntry".into()
+    }
+}
 /// MsgSetVestEntryResponse is the Msg/SetVestEntry response type.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgSetVestEntryResponse {}
+impl ::prost::Name for MsgSetVestEntryResponse {
+    const NAME: &'static str = "MsgSetVestEntryResponse";
+    const PACKAGE: &'static str = "dydxprotocol.vest";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.vest.MsgSetVestEntryResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.vest.MsgSetVestEntryResponse".into()
+    }
+}
 /// Generated client implementations.
 pub mod msg_client {
     #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]

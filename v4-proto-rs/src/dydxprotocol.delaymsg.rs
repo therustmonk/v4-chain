@@ -9,6 +9,16 @@ pub struct BlockMessageIds {
     #[prost(uint32, repeated, tag = "1")]
     pub ids: ::prost::alloc::vec::Vec<u32>,
 }
+impl ::prost::Name for BlockMessageIds {
+    const NAME: &'static str = "BlockMessageIds";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.BlockMessageIds".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.BlockMessageIds".into()
+    }
+}
 /// DelayedMessage is a message that is delayed until a certain block height.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -23,6 +33,16 @@ pub struct DelayedMessage {
     #[prost(uint32, tag = "3")]
     pub block_height: u32,
 }
+impl ::prost::Name for DelayedMessage {
+    const NAME: &'static str = "DelayedMessage";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.DelayedMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.DelayedMessage".into()
+    }
+}
 /// GenesisState defines the delaymsg module's genesis state.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -34,11 +54,31 @@ pub struct GenesisState {
     #[prost(uint32, tag = "2")]
     pub next_delayed_message_id: u32,
 }
+impl ::prost::Name for GenesisState {
+    const NAME: &'static str = "GenesisState";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.GenesisState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.GenesisState".into()
+    }
+}
 /// QueryNextDelayedMessageIdRequest is the request type for the
 /// NextDelayedMessageId RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryNextDelayedMessageIdRequest {}
+impl ::prost::Name for QueryNextDelayedMessageIdRequest {
+    const NAME: &'static str = "QueryNextDelayedMessageIdRequest";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.QueryNextDelayedMessageIdRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.QueryNextDelayedMessageIdRequest".into()
+    }
+}
 /// QueryNextDelayedMessageIdResponse is the response type for the
 /// NextDelayedMessageId RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -47,6 +87,16 @@ pub struct QueryNextDelayedMessageIdResponse {
     #[prost(uint32, tag = "1")]
     pub next_delayed_message_id: u32,
 }
+impl ::prost::Name for QueryNextDelayedMessageIdResponse {
+    const NAME: &'static str = "QueryNextDelayedMessageIdResponse";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.QueryNextDelayedMessageIdResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.QueryNextDelayedMessageIdResponse".into()
+    }
+}
 /// QueryMessageRequest is the request type for the Message RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -54,12 +104,32 @@ pub struct QueryMessageRequest {
     #[prost(uint32, tag = "1")]
     pub id: u32,
 }
+impl ::prost::Name for QueryMessageRequest {
+    const NAME: &'static str = "QueryMessageRequest";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.QueryMessageRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.QueryMessageRequest".into()
+    }
+}
 /// QueryGetMessageResponse is the response type for the Message RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryMessageResponse {
     #[prost(message, optional, tag = "1")]
     pub message: ::core::option::Option<DelayedMessage>,
+}
+impl ::prost::Name for QueryMessageResponse {
+    const NAME: &'static str = "QueryMessageResponse";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.QueryMessageResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.QueryMessageResponse".into()
+    }
 }
 /// QueryBlockMessageIdsRequest is the request type for the BlockMessageIds
 /// RPC method.
@@ -69,6 +139,16 @@ pub struct QueryBlockMessageIdsRequest {
     #[prost(uint32, tag = "1")]
     pub block_height: u32,
 }
+impl ::prost::Name for QueryBlockMessageIdsRequest {
+    const NAME: &'static str = "QueryBlockMessageIdsRequest";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.QueryBlockMessageIdsRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.QueryBlockMessageIdsRequest".into()
+    }
+}
 /// QueryGetBlockMessageIdsResponse is the response type for the BlockMessageIds
 /// RPC method.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -76,6 +156,16 @@ pub struct QueryBlockMessageIdsRequest {
 pub struct QueryBlockMessageIdsResponse {
     #[prost(uint32, repeated, tag = "1")]
     pub message_ids: ::prost::alloc::vec::Vec<u32>,
+}
+impl ::prost::Name for QueryBlockMessageIdsResponse {
+    const NAME: &'static str = "QueryBlockMessageIdsResponse";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.QueryBlockMessageIdsResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.QueryBlockMessageIdsResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod query_client {
@@ -263,6 +353,16 @@ pub struct MsgDelayMessage {
     #[prost(uint32, tag = "3")]
     pub delay_blocks: u32,
 }
+impl ::prost::Name for MsgDelayMessage {
+    const NAME: &'static str = "MsgDelayMessage";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.MsgDelayMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.MsgDelayMessage".into()
+    }
+}
 /// MsgDelayMessageResponse is a response type for the DelayMessage method.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -270,6 +370,16 @@ pub struct MsgDelayMessageResponse {
     /// The id of the created delayed message.
     #[prost(uint64, tag = "1")]
     pub id: u64,
+}
+impl ::prost::Name for MsgDelayMessageResponse {
+    const NAME: &'static str = "MsgDelayMessageResponse";
+    const PACKAGE: &'static str = "dydxprotocol.delaymsg";
+    fn full_name() -> ::prost::alloc::string::String {
+        "dydxprotocol.delaymsg.MsgDelayMessageResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/dydxprotocol.delaymsg.MsgDelayMessageResponse".into()
+    }
 }
 /// Generated client implementations.
 pub mod msg_client {
