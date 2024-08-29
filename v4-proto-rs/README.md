@@ -1,18 +1,5 @@
 # Rust crate for dYdX Chain protobufs
 
-## !!! TODO before contribution to the upstream remove this section of README !!!
-
-To use for development (Nethermind SSO login enabled, ssh keys are loaded by ssh-agent)
-
-    Cargo.toml
-
-    ```toml
-    [dependencies]
-    v4-proto-rs = { git = "ssh://git@github.com/NethermindEth/v4-chain.git" }
-    ```
-TODO:
-* add a crate publishing to .github workflow
-
 ## Usage as a dependency
 
 Cargo.toml
@@ -68,7 +55,7 @@ cargo clippy
 
 2) Why do I need a `protoc` for this crate development? I thought `prost-build` crate generates everything natively with Rust?
 
-    The main work (parsing, linking etc - have a look https://protobuf.com/docs/descriptors) is done by `protoc`. 
+    The main work (parsing, linking etc - have a look https://protobuf.com/docs/descriptors) is done by `protoc`.
     The result of the `protoc` work is a "file descriptor" (think of it as IR assembly language like LLVM IR) - a binary file. This file descriptor is an input for a language-specific code generator like `prost`. Think of `prost` crate as a compiler target which generates a ISA-specific "assembly" (in our case, Rust) as an output.
     `prost-build` always used the `protoc` but since version 0.11 of [prost-build](https://github.com/tokio-rs/prost?tab=readme-ov-file#protoc) it requires `protoc` (the protobuf compiler) to be already installed on the system - before the `protoc` could be compiled during the `prost-build` build (https://github.com/tokio-rs/prost/blob/v0.10.4/prost-build/build.rs#L77).
 
